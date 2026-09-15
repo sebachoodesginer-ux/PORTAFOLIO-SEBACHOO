@@ -1,0 +1,2288 @@
+/* =========================================================
+   CONTACTO — SEBACHO
+   MODO CREATIVO OPTIMIZADO + ANIMACIONES DIFERENTES
+========================================================= */
+
+:root {
+    --contact-red: #E41F1E;
+    --contact-green: #20C765;
+    --contact-black: #050505;
+    --contact-white: #FFFFFF;
+    --contact-beige: #FAF3E6;
+    --contact-beige-2: #F5EBD9;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.contact-page {
+    margin: 0;
+    background: #050505;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.contact-main {
+    position: relative;
+    width: 100%;
+
+    background-image: url("../img/fondo-web.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.contact-layout {
+    position: relative;
+    width: 100%;
+    min-height: clamp(950px, 67vw, 1280px);
+    overflow: visible;
+}
+
+
+/* =========================================================
+   OPTIMIZACIÓN
+========================================================= */
+
+.contact-character,
+.thanks-character,
+.contact-list,
+.contact-hablemos,
+.contact-message-title,
+.contact-info-title,
+.contact-send-button,
+.meeting-button,
+.meeting-location {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   RECURSO SUPERIOR
+========================================================= */
+
+.contact-menu-superior-layer {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    width: 47%;
+    max-width: 900px;
+    min-width: 520px;
+    pointer-events: none;
+}
+
+.contact-menu-superior {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PARTE SUPERIOR
+========================================================= */
+
+.contact-top {
+    position: relative;
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 34% 35% 31%;
+
+    width: 100%;
+    height: clamp(610px, 43vw, 825px);
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   IZQUIERDA
+========================================================= */
+
+.contact-left {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    overflow: visible;
+}
+
+.contact-red-background {
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    pointer-events: none;
+}
+
+.contact-hablemos {
+    position: absolute;
+    z-index: 30;
+
+    top: 4%;
+    left: 2%;
+
+    width: 90%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PAPELES BEIGE
+========================================================= */
+
+.contact-beige-background {
+    position: absolute;
+    z-index: 5;
+
+    top: 3%;
+    bottom: 3%;
+
+    background:
+        radial-gradient(
+            circle at 15% 12%,
+            rgba(255,255,255,.72),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 88% 85%,
+            rgba(211,189,151,.20),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #FFF9EE 0%,
+            var(--contact-beige) 48%,
+            var(--contact-beige-2) 100%
+        );
+
+    border: 1px solid rgba(78,57,34,.13);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.22);
+
+    clip-path: polygon(
+        1% 1%,
+        18% 0,
+        39% 1%,
+        62% 0,
+        83% 1%,
+        99% 0,
+        100% 17%,
+        99% 38%,
+        100% 61%,
+        99% 81%,
+        100% 99%,
+        79% 100%,
+        61% 99%,
+        39% 100%,
+        19% 99%,
+        0 100%,
+        1% 78%,
+        0 58%,
+        1% 37%,
+        0 17%
+    );
+}
+
+.contact-beige-background-center {
+    left: 2%;
+    right: 2%;
+    transform: rotate(-.18deg);
+}
+
+.contact-beige-background-right {
+    left: 3%;
+    right: 2%;
+    transform: rotate(.18deg);
+}
+
+
+/* =========================================================
+   CENTRO
+========================================================= */
+
+.contact-center {
+    position: relative;
+    z-index: 20;
+
+    height: 100%;
+
+    padding: 4.6% 7% 4%;
+
+    box-sizing: border-box;
+}
+
+.contact-center-content {
+    position: relative;
+    z-index: 20;
+
+    width: 100%;
+}
+
+.contact-message-title {
+    display: block;
+
+    width: 88%;
+    max-width: 550px;
+
+    margin: 0 auto 4.5%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    gap: clamp(11px, .85vw, 16px);
+}
+
+.contact-field {
+    display: flex;
+    align-items: center;
+
+    min-height: clamp(60px, 4vw, 76px);
+
+    padding: 0 20px;
+
+    border: 1.5px solid rgba(20,20,20,.25);
+    border-radius: 9px;
+
+    background: rgba(255,255,255,.42);
+
+    transition:
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease,
+        box-shadow .18s ease;
+}
+
+.contact-field:hover {
+    transform: translateY(-2px);
+}
+
+.contact-field:focus-within {
+    border-color: var(--contact-red);
+
+    background: rgba(255,255,255,.72);
+
+    box-shadow:
+        0 0 0 2px rgba(228,31,30,.08);
+}
+
+.field-icon {
+    flex: 0 0 42px;
+
+    color: #111;
+
+    font-weight: 900;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #111;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.94rem, 1.05vw, 1.12rem);
+    font-weight: 600;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: rgba(17,17,17,.58);
+}
+
+.contact-field select {
+    cursor: pointer;
+}
+
+.contact-field-message {
+    align-items: flex-start;
+
+    min-height: clamp(140px, 9vw, 175px);
+
+    padding-top: 18px;
+}
+
+.contact-field textarea {
+    height: clamp(105px, 7.2vw, 140px);
+
+    resize: none;
+}
+
+
+/* =========================================================
+   BOTÓN ENVIAR
+========================================================= */
+
+.contact-send-button {
+    display: block;
+
+    width: min(76%, 410px);
+
+    margin: -8px auto 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        filter .2s ease,
+        opacity .2s ease;
+}
+
+.contact-send-button img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    pointer-events: none;
+}
+
+.contact-send-button:hover {
+    filter: brightness(1.06);
+}
+
+.contact-send-button.is-sending {
+    opacity: .58;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   DERECHA
+========================================================= */
+
+.contact-right {
+    position: relative;
+    z-index: 20;
+
+    height: 100%;
+
+    padding: 4.8% 7% 4%;
+
+    box-sizing: border-box;
+}
+
+.contact-right-content {
+    position: relative;
+    z-index: 20;
+}
+
+.contact-info-title {
+    display: block;
+
+    width: 88%;
+    max-width: 430px;
+
+    margin: 0 0 7%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MÉTODOS DE CONTACTO
+========================================================= */
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+
+    gap: clamp(14px, 1.15vw, 21px);
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    width: fit-content;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: clamp(.96rem, 1.12vw, 1.22rem);
+    font-weight: 750;
+
+    transition:
+        transform .18s ease,
+        opacity .18s ease;
+}
+
+.contact-method:hover {
+    transform: translateX(5px);
+}
+
+.method-icon {
+    display: grid;
+    place-items: center;
+
+    width: clamp(48px, 3.25vw, 62px);
+    height: clamp(48px, 3.25vw, 62px);
+
+    flex: 0 0 clamp(48px, 3.25vw, 62px);
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: #FFF;
+
+    font-weight: 900;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.contact-method:hover .method-icon {
+    transform: scale(1.07);
+    background: var(--contact-red);
+}
+
+.contact-method-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-method-text small {
+    font-size: .7rem;
+    color: rgba(17,17,17,.62);
+}
+
+
+/* =========================================================
+   COLOMBIA
+========================================================= */
+
+.contact-location {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 30px;
+
+    color: #111;
+}
+
+.location-colombia-logo {
+    width: clamp(52px, 3.4vw, 66px);
+
+    pointer-events: none;
+}
+
+.contact-location p {
+    margin: 4px 0 0;
+
+    font-size: .8rem;
+}
+
+
+/* =========================================================
+   LISTA
+========================================================= */
+
+.contact-list-layer {
+    position: absolute;
+    z-index: 5000;
+
+    top: 0;
+    left: 0;
+
+    width: 34%;
+    height: clamp(610px, 43vw, 825px);
+
+    pointer-events: none;
+}
+
+.contact-list {
+    position: absolute;
+    z-index: 1;
+
+    left: 3%;
+    bottom: -60%;
+
+    width: 105%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PERSONAJE PRINCIPAL
+========================================================= */
+
+.contact-character-layer {
+    position: absolute;
+    z-index: 9000;
+
+    top: 0;
+    left: 0;
+
+    width: 34%;
+    height: clamp(610px, 43vw, 825px);
+
+    pointer-events: none;
+}
+
+.contact-character {
+    position: absolute;
+    z-index: 10;
+
+    top: 25% !important;
+    left: 40% !important;
+
+    width: 105% !important;
+
+    transform: translate3d(-50%, 0, 0);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PARTE INFERIOR
+========================================================= */
+
+.contact-bottom {
+    position: relative;
+    z-index: 200;
+
+    display: grid;
+
+    grid-template-columns: 34% 35% 31%;
+
+    width: 100%;
+
+    min-height: clamp(400px, 26vw, 500px);
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   REUNIÓN
+========================================================= */
+
+.contact-meeting {
+    position: relative;
+    z-index: 220;
+
+    grid-column: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 5px 3% 55px;
+
+    transform: translateY(-28px);
+}
+
+.meeting-content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.meeting-title {
+    margin: 0 0 13px;
+
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(1.45rem, 1.8vw, 2.1rem);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.meeting-description {
+    width: 100%;
+    max-width: 590px;
+
+    margin: 0 auto 14px;
+
+    color: rgba(255,255,255,.94);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(.95rem, 1.05vw, 1.17rem);
+    font-weight: 500;
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+.meeting-description strong {
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   AGENDAR REUNIÓN
+========================================================= */
+
+.meeting-button {
+    display: block;
+
+    width: min(94%, 470px);
+
+    margin: -7px auto 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.meeting-button img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   UBICACIÓN
+========================================================= */
+
+.meeting-location {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    width: min(80%, 390px);
+
+    min-height: 62px;
+
+    margin: 2px auto 0;
+    padding: 9px 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 15px;
+
+    background: rgba(15,15,15,.80);
+
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        border-color .18s ease,
+        background .18s ease,
+        box-shadow .18s ease;
+}
+
+.meeting-location:hover {
+    border-color: rgba(228,31,30,.7);
+
+    background: rgba(25,10,10,.94);
+
+    box-shadow:
+        0 0 14px rgba(228,31,30,.12);
+}
+
+.meeting-location-icon {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+
+.meeting-location-text {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.meeting-location-label {
+    color: var(--contact-red);
+
+    font-size: .6rem;
+    font-weight: 900;
+
+    letter-spacing: .14em;
+}
+
+.meeting-location-text strong {
+    font-size: clamp(.75rem, .8vw, .9rem);
+    font-weight: 900;
+}
+
+.meeting-location-arrow {
+    color: var(--contact-red);
+
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   PERSONAJE GRACIAS
+========================================================= */
+
+.contact-thanks {
+    position: relative;
+    z-index: 500;
+
+    grid-column: 3;
+
+    min-height: 100%;
+
+    overflow: visible;
+}
+
+.thanks-character {
+    position: absolute;
+    z-index: 700;
+
+    right: -2%;
+    bottom: 12%;
+
+    width: min(118%, 620px);
+
+    max-width: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RECURSOS ENCIMA DEL FOOTER
+========================================================= */
+
+.contact-footer-assets {
+    position: relative;
+    z-index: 100;
+
+    width: 100%;
+    height: 25px;
+
+    margin: -8px 0 -7px;
+
+    overflow: visible;
+
+    pointer-events: none;
+}
+
+.contact-footer-left {
+    position: absolute;
+    z-index: 110;
+
+    left: 0;
+    bottom: -12px;
+
+    width: 58vw;
+}
+
+.contact-footer-right {
+    position: absolute;
+    z-index: 120;
+
+    right: 0;
+    bottom: -12px;
+
+    width: 58vw;
+}
+
+.contact-page .footer {
+    position: relative;
+    z-index: 105;
+
+    margin-top: -7px;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.contact-toast {
+    position: fixed;
+    z-index: 999999;
+
+    left: 50%;
+    bottom: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    width: min(calc(100% - 36px), 430px);
+
+    min-height: 76px;
+
+    padding: 12px 48px 12px 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 17px;
+
+    background: rgba(8,8,8,.97);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.38);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translate3d(-50%,120%,0);
+
+    transition:
+        transform .45s cubic-bezier(.16,1,.3,1),
+        opacity .3s ease,
+        visibility .3s ease;
+}
+
+.contact-toast.show {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translate3d(-50%,0,0);
+}
+
+.contact-toast-icon {
+    display: grid;
+    place-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: rgba(228,31,30,.13);
+}
+
+.toast-loader {
+    width: 20px;
+    height: 20px;
+
+    border: 3px solid rgba(255,255,255,.20);
+    border-top-color: #FFFFFF;
+
+    border-radius: 50%;
+
+    animation: toastSpin .8s linear infinite;
+}
+
+@keyframes toastSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contact-toast-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-toast-kicker {
+    color: var(--contact-red);
+
+    font-size: .62rem;
+    font-weight: 900;
+
+    letter-spacing: .16em;
+}
+
+.contact-toast-message {
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: 900;
+}
+
+.contact-toast-close {
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #FFFFFF;
+
+    font-size: 1.3rem;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+}
+
+.contact-toast.success .toast-loader,
+.contact-toast.error .toast-loader {
+    display: none;
+}
+
+.contact-toast.success .contact-toast-icon::before {
+    content: "✓";
+
+    color: var(--contact-green);
+
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.contact-toast.success .contact-toast-kicker,
+.contact-toast.success .contact-toast-message {
+    color: var(--contact-green);
+}
+
+.contact-toast.error .contact-toast-icon::before {
+    content: "!";
+
+    color: #FF4444;
+
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.contact-toast.error .contact-toast-message {
+    color: #FF5757;
+}
+
+
+/* =========================================================
+   MODALES
+========================================================= */
+
+.seb-modal {
+    position: fixed;
+    z-index: 9999998;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .22s ease,
+        visibility .22s ease;
+}
+
+.seb-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+.seb-modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.88);
+}
+
+.seb-modal-window {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    width: min(1050px,94vw);
+
+    max-height: 91vh;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 20px;
+
+    background: #090909;
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.5);
+
+    opacity: 0;
+
+    transform:
+        translate3d(0,24px,0)
+        scale(.985);
+
+    transition:
+        transform .3s cubic-bezier(.16,1,.3,1),
+        opacity .22s ease;
+}
+
+.seb-modal.is-open .seb-modal-window {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+}
+
+.seb-modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 24px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.seb-modal-mini {
+    color: var(--contact-red);
+
+    font-size: .6rem;
+    font-weight: 900;
+
+    letter-spacing: .18em;
+}
+
+.seb-modal-header h2 {
+    margin: 3px 0 4px;
+
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(1.1rem,1.6vw,1.7rem);
+    font-weight: 900;
+}
+
+.seb-modal-header p {
+    margin: 0;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: .75rem;
+}
+
+.seb-modal-close {
+    display: grid;
+    place-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+
+    background: #161616;
+
+    color: #FFFFFF;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition:
+        transform .18s ease,
+        background .18s ease;
+}
+
+.seb-modal-close:hover {
+    background: var(--contact-red);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   GOOGLE CALENDAR / MAPS
+========================================================= */
+
+.seb-calendar-window {
+    height: min(820px,91vh);
+}
+
+.seb-location-window {
+    width: min(900px,94vw);
+}
+
+.seb-embed-container {
+    position: relative;
+
+    flex: 1;
+
+    min-height: 500px;
+
+    background: var(--contact-beige);
+
+    overflow: hidden;
+
+    pointer-events: auto;
+}
+
+.seb-map-container {
+    height: min(560px,65vh);
+    min-height: 450px;
+
+    flex: none;
+
+    background: #111;
+}
+
+.seb-google-frame {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 500px;
+
+    border: 0;
+
+    background: #FFFFFF;
+
+    pointer-events: auto;
+}
+
+.seb-map-container .seb-google-frame {
+    min-height: 450px;
+}
+
+.seb-embed-loader {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    background: #0C0C0C;
+
+    color: rgba(255,255,255,.65);
+}
+
+.seb-embed-loader span {
+    width: 27px;
+    height: 27px;
+
+    border: 3px solid rgba(255,255,255,.15);
+    border-top-color: var(--contact-red);
+
+    border-radius: 50%;
+
+    animation: embedSpin .8s linear infinite;
+}
+
+@keyframes embedSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.seb-embed-loader strong {
+    font-size: .65rem;
+    letter-spacing: .1em;
+}
+
+.seb-modal-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 20px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+
+    background: #070707;
+
+    color: rgba(255,255,255,.48);
+
+    font-size: .62rem;
+}
+
+.modal-external-button {
+    color: var(--contact-red);
+
+    text-decoration: none;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.custom-cursor {
+    z-index: 2147483647 !important;
+    pointer-events: none !important;
+}
+
+.seb-modal-backdrop,
+.seb-modal-window,
+.seb-modal-header,
+.seb-modal-close,
+.seb-modal-bottom,
+.modal-external-button {
+    cursor: none;
+}
+
+
+/* =========================================================
+   ENTRADA
+========================================================= */
+
+.contact-animate {
+    opacity: 0;
+
+    transform: translate3d(0,20px,0);
+
+    transition:
+        opacity .55s ease,
+        transform .55s cubic-bezier(.16,1,.3,1);
+}
+
+.contact-ready .contact-animate {
+    opacity: 1;
+
+    transform: translate3d(0,0,0);
+}
+
+.contact-character.contact-animate {
+    transform:
+        translate3d(-50%,18px,0);
+}
+
+.contact-ready .contact-character.contact-animate {
+    transform:
+        translate3d(-50%,0,0);
+}
+
+
+/* =========================================================
+   MODO CREATIVO
+========================================================= */
+
+/*
+   Cada elemento tiene una animación diferente.
+   Solo usamos principalmente transform para mantener
+   buen rendimiento.
+*/
+
+
+/* =========================================================
+   TÍTULO HABLEMOS
+   Movimiento tipo sticker
+========================================================= */
+
+body.creative-on .contact-hablemos {
+    will-change: transform;
+
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(228,31,30,.42)
+        );
+
+    animation:
+        creativeHablemos
+        4.2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   TÍTULO ENVÍAME UN MENSAJE
+   Inclinación + pequeño zoom
+========================================================= */
+
+body.creative-on .contact-message-title {
+    will-change: transform;
+
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(228,31,30,.38)
+        );
+
+    animation:
+        creativeMessageTitle
+        3.7s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   TÍTULO CONTÁCTAME
+   Desplazamiento lateral
+========================================================= */
+
+body.creative-on .contact-info-title {
+    will-change: transform;
+
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(228,31,30,.40)
+        );
+
+    animation:
+        creativeInfoTitle
+        4.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   TÍTULO REUNIÓN
+   Pulso suave
+========================================================= */
+
+body.creative-on .meeting-title {
+    will-change: transform;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.25),
+        0 0 9px rgba(228,31,30,.50);
+
+    animation:
+        creativeMeetingTitle
+        3.3s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   PERSONAJE PRINCIPAL
+   Flotación con balanceo
+========================================================= */
+
+body.creative-on .contact-character {
+    will-change: transform;
+
+    animation:
+        creativeMainCharacter
+        4.1s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   PERSONAJE GRACIAS
+   Movimiento diagonal
+========================================================= */
+
+body.creative-on .thanks-character {
+    will-change: transform;
+
+    animation:
+        creativeThanksCharacter
+        3.8s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   LISTA
+   Movimiento tipo papel
+========================================================= */
+
+body.creative-on .contact-list {
+    will-change: transform;
+
+    animation:
+        creativeList
+        5.1s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   BOTÓN ENVIAR
+   Pequeño rebote
+========================================================= */
+
+body.creative-on .contact-send-button {
+    will-change: transform;
+
+    animation:
+        creativeSend
+        3.2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   BOTÓN AGENDAR
+   Balanceo horizontal
+========================================================= */
+
+body.creative-on .meeting-button {
+    will-change: transform;
+
+    animation:
+        creativeMeetingButton
+        3.9s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   BOTÓN UBICACIÓN
+   Movimiento diagonal suave
+========================================================= */
+
+body.creative-on .meeting-location {
+    will-change: transform;
+
+    animation:
+        creativeLocation
+        4.4s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   ICONOS SOCIALES
+   SOLO HOVER
+========================================================= */
+
+body.creative-on .contact-method:hover .method-icon {
+    transform:
+        translateY(-3px)
+        rotate(-4deg)
+        scale(1.08);
+
+    background: var(--contact-red);
+}
+
+
+/* =========================================================
+   CAMPOS
+   SOLO FOCO
+========================================================= */
+
+body.creative-on .contact-field:focus-within {
+    border-color: rgba(228,31,30,.85);
+
+    box-shadow:
+        0 0 0 2px rgba(228,31,30,.10);
+}
+
+
+/* =========================================================
+   PAPELES SIN ANIMACIÓN
+========================================================= */
+
+body.creative-on .contact-beige-background-center {
+    transform: rotate(-.25deg);
+}
+
+body.creative-on .contact-beige-background-right {
+    transform: rotate(.25deg);
+}
+
+
+/* =========================================================
+   HABLEMOS
+========================================================= */
+
+@keyframes creativeHablemos {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            translate3d(6px,-7px,0)
+            rotate(.7deg);
+    }
+
+    55% {
+        transform:
+            translate3d(-3px,-3px,0)
+            rotate(-.45deg);
+    }
+
+    80% {
+        transform:
+            translate3d(2px,-8px,0)
+            rotate(.25deg);
+    }
+}
+
+
+/* =========================================================
+   ENVÍAME UN MENSAJE
+========================================================= */
+
+@keyframes creativeMessageTitle {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    35% {
+        transform:
+            translate3d(-2px,-5px,0)
+            rotate(-1deg)
+            scale(1.015);
+    }
+
+    68% {
+        transform:
+            translate3d(3px,-1px,0)
+            rotate(.55deg)
+            scale(1.006);
+    }
+
+    85% {
+        transform:
+            translate3d(0,-3px,0)
+            rotate(-.25deg)
+            scale(1.01);
+    }
+}
+
+
+/* =========================================================
+   CONTÁCTAME POR
+========================================================= */
+
+@keyframes creativeInfoTitle {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+    }
+
+    30% {
+        transform:
+            translate3d(6px,-2px,0)
+            scale(1.012);
+    }
+
+    60% {
+        transform:
+            translate3d(-3px,-6px,0)
+            scale(1.018);
+    }
+
+    82% {
+        transform:
+            translate3d(3px,-2px,0)
+            scale(1.007);
+    }
+}
+
+
+/* =========================================================
+   ¿PREFIERES UNA REUNIÓN?
+========================================================= */
+
+@keyframes creativeMeetingTitle {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+    }
+
+    38% {
+        transform:
+            translate3d(0,-5px,0)
+            scale(1.027);
+    }
+
+    60% {
+        transform:
+            translate3d(0,-2px,0)
+            scale(1.008);
+    }
+
+    78% {
+        transform:
+            translate3d(0,-4px,0)
+            scale(1.016);
+    }
+}
+
+
+/* =========================================================
+   PERSONAJE PRINCIPAL
+========================================================= */
+
+@keyframes creativeMainCharacter {
+
+    0%,
+    100% {
+        transform:
+            translate3d(-50%,0,0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    22% {
+        transform:
+            translate3d(-51%,-16px,0)
+            rotate(-1.2deg)
+            scale(1.012);
+    }
+
+    50% {
+        transform:
+            translate3d(-49%,-7px,0)
+            rotate(.8deg)
+            scale(1.021);
+    }
+
+    76% {
+        transform:
+            translate3d(-50.6%,-13px,0)
+            rotate(-.5deg)
+            scale(1.008);
+    }
+}
+
+
+/* =========================================================
+   PERSONAJE GRACIAS
+========================================================= */
+
+@keyframes creativeThanksCharacter {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    28% {
+        transform:
+            translate3d(-8px,-18px,0)
+            rotate(-.8deg)
+            scale(1.014);
+    }
+
+    55% {
+        transform:
+            translate3d(5px,-9px,0)
+            rotate(1deg)
+            scale(1.024);
+    }
+
+    80% {
+        transform:
+            translate3d(-3px,-15px,0)
+            rotate(-.3deg)
+            scale(1.009);
+    }
+}
+
+
+/* =========================================================
+   LISTA
+========================================================= */
+
+@keyframes creativeList {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(0deg);
+    }
+
+    30% {
+        transform:
+            translate3d(7px,-5px,0)
+            rotate(.65deg);
+    }
+
+    62% {
+        transform:
+            translate3d(-3px,-9px,0)
+            rotate(-.4deg);
+    }
+
+    82% {
+        transform:
+            translate3d(3px,-3px,0)
+            rotate(.2deg);
+    }
+}
+
+
+/* =========================================================
+   ENVIAR
+========================================================= */
+
+@keyframes creativeSend {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+    }
+
+    42% {
+        transform:
+            translate3d(0,-8px,0)
+            scale(1.025);
+    }
+
+    60% {
+        transform:
+            translate3d(0,-3px,0)
+            scale(1.008);
+    }
+
+    75% {
+        transform:
+            translate3d(0,-5px,0)
+            scale(1.015);
+    }
+}
+
+
+/* =========================================================
+   AGENDAR
+========================================================= */
+
+@keyframes creativeMeetingButton {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(0deg);
+    }
+
+    32% {
+        transform:
+            translate3d(-6px,-5px,0)
+            rotate(-.45deg);
+    }
+
+    62% {
+        transform:
+            translate3d(5px,-2px,0)
+            rotate(.35deg);
+    }
+
+    82% {
+        transform:
+            translate3d(-2px,-6px,0)
+            rotate(-.15deg);
+    }
+}
+
+
+/* =========================================================
+   UBICACIÓN
+========================================================= */
+
+@keyframes creativeLocation {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0);
+    }
+
+    27% {
+        transform:
+            translate3d(5px,-3px,0);
+    }
+
+    55% {
+        transform:
+            translate3d(-2px,-6px,0);
+    }
+
+    78% {
+        transform:
+            translate3d(3px,-2px,0);
+    }
+}
+
+
+/* =========================================================
+   MODAL ABIERTO
+========================================================= */
+
+body.seb-modal-open .contact-main *,
+body.seb-modal-open .site-header * {
+    animation-play-state: paused !important;
+}
+
+
+/* =========================================================
+   PESTAÑA OCULTA
+========================================================= */
+
+body.animations-paused * {
+    animation-play-state: paused !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE 1200
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .contact-top,
+    .contact-bottom {
+        grid-template-columns: 36% 36% 28%;
+    }
+
+    .contact-list-layer,
+    .contact-character-layer {
+        width: 36%;
+    }
+
+    .thanks-character {
+        right: -4%;
+        bottom: 14%;
+        width: 125%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE 900
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-layout {
+        min-height: 0;
+    }
+
+    .contact-top {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+
+    .contact-left {
+        min-height: 850px;
+    }
+
+    .contact-list-layer,
+    .contact-character-layer {
+        width: 50%;
+        height: 850px;
+    }
+
+    .contact-center {
+        min-height: 850px;
+        padding: 45px 30px;
+    }
+
+    .contact-right {
+        grid-column: 1 / -1;
+
+        min-height: 570px;
+
+        padding: 45px 8%;
+    }
+
+    .contact-methods {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-bottom {
+        grid-template-columns: 1fr 1fr;
+
+        min-height: 450px;
+    }
+
+    .contact-empty-area {
+        display: none;
+    }
+
+    .contact-meeting {
+        grid-column: 1;
+
+        padding: 15px 6% 55px;
+
+        transform: translateY(-20px);
+    }
+
+    .contact-thanks {
+        grid-column: 2;
+    }
+
+    .meeting-button {
+        width: min(95%,430px);
+    }
+
+    .meeting-location {
+        width: min(88%,370px);
+        margin-top: 2px;
+    }
+
+    .thanks-character {
+        right: -4%;
+        bottom: 16%;
+        width: 118%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE 700
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-top {
+        display: block;
+    }
+
+    .contact-left {
+        min-height: 1040px;
+    }
+
+    .contact-list-layer,
+    .contact-character-layer {
+        width: 100%;
+        height: 1040px;
+    }
+
+    .contact-character {
+        top: 21% !important;
+        left: 45% !important;
+
+        width: 100% !important;
+    }
+
+    .contact-list {
+        bottom: -4%;
+    }
+
+    .contact-center {
+        min-height: 790px;
+
+        padding: 65px 35px;
+    }
+
+    .contact-right {
+        min-height: 670px;
+
+        padding: 60px 40px;
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-bottom {
+        display: block;
+    }
+
+    .contact-meeting {
+        width: 100%;
+
+        min-height: 390px;
+
+        padding: 15px 25px 45px;
+
+        transform: translateY(-22px);
+    }
+
+    .meeting-content {
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .meeting-title {
+        font-size: clamp(1.35rem,6vw,1.75rem);
+    }
+
+    .meeting-description {
+        margin-bottom: 10px;
+
+        font-size: clamp(.9rem,3.6vw,1.05rem);
+    }
+
+    .meeting-button {
+        width: min(96%,440px);
+        margin-top: -5px;
+    }
+
+    .meeting-location {
+        width: min(90%,390px);
+        margin-top: 0;
+    }
+
+    .contact-thanks {
+        min-height: 450px;
+    }
+
+    .thanks-character {
+        right: -5%;
+        bottom: 18%;
+
+        width: min(108%,590px);
+    }
+
+
+    /* MODALES */
+
+    .seb-modal {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .seb-modal-window {
+        width: 100%;
+        max-height: 94vh;
+
+        border-radius: 20px 20px 0 0;
+
+        transform: translate3d(0,100%,0);
+    }
+
+    .seb-modal.is-open .seb-modal-window {
+        transform: translate3d(0,0,0);
+    }
+
+    .seb-calendar-window {
+        height: 92vh;
+    }
+
+    .seb-map-container {
+        min-height: 55vh;
+    }
+
+    .seb-modal-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* MÁS LENTO EN MÓVIL = MENOS CARGA */
+
+    body.creative-on .contact-hablemos {
+        animation-duration: 5s;
+    }
+
+    body.creative-on .contact-message-title {
+        animation-duration: 4.7s;
+    }
+
+    body.creative-on .contact-info-title {
+        animation-duration: 5.2s;
+    }
+
+    body.creative-on .meeting-title {
+        animation-duration: 4.3s;
+    }
+
+    body.creative-on .contact-character {
+        animation-duration: 5s;
+    }
+
+    body.creative-on .thanks-character {
+        animation-duration: 4.7s;
+    }
+
+    body.creative-on .contact-list {
+        animation-duration: 6.2s;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE 470
+========================================================= */
+
+@media (max-width: 470px) {
+
+    .contact-left {
+        min-height: 900px;
+    }
+
+    .contact-list-layer,
+    .contact-character-layer {
+        height: 900px;
+    }
+
+    .contact-character {
+        top: 21% !important;
+        left: 45% !important;
+
+        width: 102% !important;
+    }
+
+    .contact-meeting {
+        min-height: 370px;
+
+        padding: 10px 18px 40px;
+
+        transform: translateY(-18px);
+    }
+
+    .meeting-button {
+        width: 98%;
+    }
+
+    .meeting-location {
+        width: 92%;
+        margin-top: 0;
+    }
+
+    .contact-thanks {
+        min-height: 410px;
+    }
+
+    .thanks-character {
+        right: -4%;
+        bottom: 20%;
+        width: 112%;
+    }
+}
+
+
+/* =========================================================
+   REDUCIR MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-page *,
+    .contact-page *::before,
+    .contact-page *::after {
+        animation: none !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

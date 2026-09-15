@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -10,27 +9,982 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Proyectos | Sebacho
-    </title>
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
+    <meta
+        name="description"
+        content="Contacto | Sebacho Portafolio"
     >
 
+    <title>Contacto | Sebacho</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="./img/web.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 
-<body>
+<body class="contact-page">
 
-    <h1 style="
-        padding:100px;
-        text-align:center;
-    ">
-        Página de proyectos
-    </h1>
+    <!-- CURSOR -->
+    <div
+        class="custom-cursor"
+        id="customCursor"
+        aria-hidden="true"
+    ></div>
+
+    <canvas
+        id="globalParticles"
+        class="global-particles"
+    ></canvas>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+        class="site-header header-visible"
+        id="siteHeader"
+    >
+
+        <div class="header-background"></div>
+
+        <div class="header-inner">
+
+            <a
+                href="index.html"
+                class="brand hover-menu-effect magnetic-button"
+                id="headerBrand"
+                aria-label="Inicio"
+            >
+
+                <img
+                    src="img/inicio/logo-sebacho.png"
+                    alt="Sebacho"
+                    class="floating-logo"
+                    draggable="false"
+                >
+
+            </a>
+
+
+            <nav
+                class="main-nav"
+                id="mainNav"
+            >
+
+                <a
+                    href="index.html"
+                    class="nav-link magnetic-button"
+                >
+                    INICIO
+                </a>
+
+                <a
+                    href="proyectos.html"
+                    class="nav-link magnetic-button"
+                >
+                    PROYECTOS
+                </a>
+
+                <a
+                    href="sobre-mi.html"
+                    class="nav-link magnetic-button"
+                >
+                    SOBRE MÍ
+                </a>
+
+                <a
+                    href="contacto.html"
+                    class="nav-link active magnetic-button"
+                >
+                    CONTACTO
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="creative-mode hover-menu-effect magnetic-button"
+                    id="creativeMode"
+                    type="button"
+                    aria-label="Activar modo creativo"
+                    aria-pressed="false"
+                >
+
+                    <img
+                        src="img/inicio/modo-creativo-marco.png"
+                        alt=""
+                        class="creative-mode-frame"
+                        draggable="false"
+                    >
+
+                    <span class="creative-mode-label">
+                        MODO CREATIVO
+                    </span>
+
+                    <span class="creative-switch">
+                        <span class="creative-switch-dot"></span>
+                    </span>
+
+                </button>
+
+
+                <img
+                    src="img/inicio/corona.png"
+                    alt=""
+                    class="header-crown creative-crown"
+                    draggable="false"
+                >
+
+            </div>
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
+
+    <main class="contact-main">
+
+        <section
+            class="contact-layout"
+            id="contacto"
+        >
+
+            <!-- RECURSO SUPERIOR -->
+
+            <div class="contact-menu-superior-layer">
+
+                <img
+                    src="img/contacto/menu-superior.png"
+                    alt=""
+                    class="contact-menu-superior"
+                    draggable="false"
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 PARTE SUPERIOR
+            ================================================== -->
+
+            <div class="contact-top">
+
+
+                <!-- IZQUIERDA -->
+
+                <section class="contact-left">
+
+                    <img
+                        src="img/contacto/fondo-rojo.png"
+                        alt=""
+                        class="contact-red-background"
+                        draggable="false"
+                    >
+
+                    <img
+                        src="img/contacto/Titulo-hablemos.png"
+                        alt="Hablemos"
+                        class="contact-hablemos contact-animate creative-title"
+                        draggable="false"
+                    >
+
+                </section>
+
+
+                <!-- =================================================
+                     FORMULARIO
+                ================================================== -->
+
+                <section class="contact-center">
+
+                    <div
+                        class="contact-beige-background contact-beige-background-center"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div class="contact-center-content">
+
+                        <img
+                            src="img/contacto/titulo-mensaje.png"
+                            alt="Envíame un mensaje"
+                            class="contact-message-title contact-animate creative-title"
+                            draggable="false"
+                        >
+
+
+                        <form
+                            class="contact-form"
+                            id="contactForm"
+                        >
+
+                            <label class="contact-field field-one">
+
+                                <span class="field-icon">●</span>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="nombre"
+                                    placeholder="Tu nombre"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </label>
+
+
+                            <label class="contact-field field-two">
+
+                                <span class="field-icon">✉</span>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="correo"
+                                    placeholder="Tu correo"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </label>
+
+
+                            <label class="contact-field field-three">
+
+                                <span class="field-icon">▣</span>
+
+                                <select
+                                    id="contactProject"
+                                    name="proyecto"
+                                    required
+                                >
+
+                                    <option
+                                        value=""
+                                        selected
+                                        disabled
+                                    >
+                                        ¿De qué se trata?
+                                    </option>
+
+                                    <option value="branding">
+                                        Branding
+                                    </option>
+
+                                    <option value="diseno">
+                                        Diseño gráfico
+                                    </option>
+
+                                    <option value="web">
+                                        Diseño web
+                                    </option>
+
+                                    <option value="audiovisual">
+                                        Audiovisual
+                                    </option>
+
+                                    <option value="3d">
+                                        Diseño 3D
+                                    </option>
+
+                                    <option value="ilustracion">
+                                        Ilustración
+                                    </option>
+
+                                    <option value="colaboracion">
+                                        Colaboración
+                                    </option>
+
+                                    <option value="otro">
+                                        Otro
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+
+                            <label
+                                class="contact-field contact-field-message field-four"
+                            >
+
+                                <span class="field-icon">◌</span>
+
+                                <textarea
+                                    id="contactMessage"
+                                    name="mensaje"
+                                    placeholder="Cuéntame más..."
+                                    required
+                                ></textarea>
+
+                            </label>
+
+
+                            <button
+                                type="submit"
+                                class="contact-send-button magnetic-button"
+                                id="contactSubmitButton"
+                            >
+
+                                <img
+                                    src="img/contacto/boton-enviar.png"
+                                    alt="Enviar"
+                                    draggable="false"
+                                >
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     DERECHA
+                ================================================== -->
+
+                <aside class="contact-right">
+
+                    <div
+                        class="contact-beige-background contact-beige-background-right"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div class="contact-right-content">
+
+                        <img
+                            src="img/contacto/titulo-contactame-por.png"
+                            alt="También puedes contactarme por"
+                            class="contact-info-title contact-animate creative-title"
+                            draggable="false"
+                        >
+
+
+                        <div class="contact-methods">
+
+                            <a
+                                href="https://wa.me/573243622158"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-method magnetic-button method-whatsapp"
+                            >
+                                <span class="method-icon">W</span>
+                                <span>WhatsApp</span>
+                            </a>
+
+
+                            <a
+                                href="mailto:sebachoo.desginer@gmail.com?subject=Contacto%20desde%20tu%20portafolio"
+                                class="contact-method magnetic-button method-email"
+                            >
+
+                                <span class="method-icon">✉</span>
+
+                                <span class="contact-method-text">
+
+                                    <strong>Email</strong>
+
+                                    <small>
+                                        sebachoo.desginer@gmail.com
+                                    </small>
+
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="https://www.linkedin.com/in/ssebachoo-designer-447608274/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-method magnetic-button method-linkedin"
+                            >
+                                <span class="method-icon">in</span>
+                                <span>LinkedIn</span>
+                            </a>
+
+
+                            <a
+                                href="https://www.instagram.com/sebbacho/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-method magnetic-button method-instagram"
+                            >
+                                <span class="method-icon">IG</span>
+                                <span>Instagram</span>
+                            </a>
+
+
+                            <a
+                                href="https://www.behance.net/skullrex00reli"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-method magnetic-button method-behance"
+                            >
+                                <span class="method-icon">Bē</span>
+                                <span>Behance</span>
+                            </a>
+
+                        </div>
+
+
+                        <div class="contact-location">
+
+                            <img
+                                src="img/contacto/logo-colombia.png"
+                                alt="Colombia"
+                                class="location-colombia-logo"
+                                draggable="false"
+                            >
+
+                            <div>
+
+                                <strong>
+                                    Colombia
+                                </strong>
+
+                                <p>
+                                    Disponible para proyectos locales y remotos.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <!-- =================================================
+                 PARTE INFERIOR
+            ================================================== -->
+
+            <div class="contact-bottom">
+
+                <section class="contact-empty-area"></section>
+
+
+                <!-- REUNIÓN -->
+
+                <section class="contact-meeting">
+
+                    <div class="meeting-content">
+
+                        <h2 class="meeting-title">
+                            ¿PREFIERES UNA REUNIÓN?
+                        </h2>
+
+
+                        <p class="meeting-description">
+
+                            Podemos agendar una
+
+                            <strong>videollamada</strong>
+
+                            para conocer más sobre tu proyecto y explorar
+                            cómo podemos trabajar juntos.
+
+                        </p>
+
+
+                        <!-- CALENDARIO -->
+
+                        <button
+                            type="button"
+                            class="meeting-button magnetic-button"
+                            id="openCalendarModal"
+                            aria-label="Agendar una reunión"
+                        >
+
+                            <img
+                                src="img/contacto/boton-agendar-cita.png"
+                                alt="Agendar reunión"
+                                draggable="false"
+                            >
+
+                        </button>
+
+
+                        <!-- UBICACIÓN -->
+
+                        <button
+                            type="button"
+                            class="meeting-location magnetic-button"
+                            id="openLocationModal"
+                            aria-label="Ver ubicación"
+                        >
+
+                            <img
+                                src="img/contacto/logo-colombia.png"
+                                alt=""
+                                class="meeting-location-icon"
+                                draggable="false"
+                            >
+
+
+                            <span class="meeting-location-text">
+
+                                <span class="meeting-location-label">
+                                    UBICACIÓN
+                                </span>
+
+                                <strong>
+                                    Tres Quebradas · Colombia
+                                </strong>
+
+                            </span>
+
+
+                            <span class="meeting-location-arrow">
+                                ↗
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PERSONAJE GRACIAS -->
+
+                <section class="contact-thanks">
+
+                    <img
+                        src="img/contacto/personaje-gracias.png"
+                        alt="Gracias por pasar por aquí"
+                        class="thanks-character"
+                        draggable="false"
+                    >
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 RECURSOS FOOTER
+            ================================================== -->
+
+            <div class="contact-footer-assets">
+
+                <img
+                    src="img/contacto/footer-izquierda.png"
+                    alt=""
+                    class="contact-footer-left"
+                    draggable="false"
+                >
+
+                <img
+                    src="img/contacto/footer-derecha.png"
+                    alt=""
+                    class="contact-footer-right"
+                    draggable="false"
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 LISTA
+            ================================================== -->
+
+            <div class="contact-list-layer">
+
+                <img
+                    src="img/contacto/lista-aqui-estoy.png"
+                    alt="Aquí estoy"
+                    class="contact-list contact-animate"
+                    draggable="false"
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 PERSONAJE IZQUIERDO
+            ================================================== -->
+
+            <div class="contact-character-layer">
+
+                <img
+                    src="img/contacto/personaje-cuentame-tu-idea.png"
+                    alt="Cuéntame tu idea"
+                    class="contact-character contact-animate"
+                    draggable="false"
+                >
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <canvas
+            id="footerFire"
+            class="footer-fire"
+        ></canvas>
+
+        <div class="footer-red-glow"></div>
+
+
+        <div class="footer-inner">
+
+            <a
+                href="index.html"
+                class="footer-logo magnetic-button"
+            >
+
+                <img
+                    src="img/inicio/logo-sebacho.png"
+                    alt="Sebacho"
+                    class="floating-logo footer-floating-logo"
+                    draggable="false"
+                >
+
+            </a>
+
+
+            <nav class="footer-nav">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="proyectos.html">
+                    Proyectos
+                </a>
+
+                <a href="sobre-mi.html">
+                    Sobre mí
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://www.instagram.com/sebbacho/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    IG
+                </a>
+
+                <a
+                    href="https://www.behance.net/skullrex00reli"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Bē
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/ssebachoo-designer-447608274/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    in
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer-copy">
+
+            © <span id="currentYear"></span>
+            Sebastián Ramírez.
+            Todos los derechos reservados.
+
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="contact-toast"
+        id="contactToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <div class="contact-toast-icon">
+            <span class="toast-loader"></span>
+        </div>
+
+
+        <div class="contact-toast-content">
+
+            <span
+                class="contact-toast-kicker"
+                id="contactToastKicker"
+            >
+                SEBACHO
+            </span>
+
+            <strong
+                class="contact-toast-message"
+                id="contactToastMessage"
+            >
+                ENVIANDO MENSAJE...
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="contact-toast-close"
+            id="contactToastClose"
+            aria-label="Cerrar"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL CALENDARIO
+    ====================================================== -->
+
+    <div
+        class="seb-modal"
+        id="calendarModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="seb-modal-backdrop"
+            data-close-calendar
+        ></div>
+
+
+        <section
+            class="seb-modal-window seb-calendar-window"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="calendarModalTitle"
+        >
+
+            <header class="seb-modal-header">
+
+                <div>
+
+                    <span class="seb-modal-mini">
+                        SEBACHO
+                    </span>
+
+                    <h2 id="calendarModalTitle">
+                        AGENDEMOS UNA REUNIÓN
+                    </h2>
+
+                    <p>
+                        Escoge el día y la hora que mejor te funcionen.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="seb-modal-close"
+                    id="closeCalendarModal"
+                    aria-label="Cerrar calendario"
+                >
+                    ×
+                </button>
+
+            </header>
+
+
+            <div
+                class="seb-embed-container"
+                id="calendarContainer"
+            >
+
+                <div class="seb-embed-loader">
+
+                    <span></span>
+
+                    <strong>
+                        CARGANDO CALENDARIO...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="seb-modal-bottom">
+
+                <span>
+                    Reserva administrada mediante Google Calendar
+                </span>
+
+                <a
+                    href="https://calendar.app.google/RkL6dtPsdtdWEwFr6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="modal-external-button"
+                >
+                    ABRIR EN GOOGLE ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL UBICACIÓN
+    ====================================================== -->
+
+    <div
+        class="seb-modal"
+        id="locationModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="seb-modal-backdrop"
+            data-close-location
+        ></div>
+
+
+        <section
+            class="seb-modal-window seb-location-window"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="locationModalTitle"
+        >
+
+            <header class="seb-modal-header">
+
+                <div>
+
+                    <span class="seb-modal-mini">
+                        UBICACIÓN
+                    </span>
+
+                    <h2 id="locationModalTitle">
+                        TRES QUEBRADAS
+                    </h2>
+
+                    <p>
+                        Colombia
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="seb-modal-close"
+                    id="closeLocationModal"
+                    aria-label="Cerrar ubicación"
+                >
+                    ×
+                </button>
+
+            </header>
+
+
+            <div
+                class="seb-embed-container seb-map-container"
+                id="mapContainer"
+            >
+
+                <div class="seb-embed-loader">
+
+                    <span></span>
+
+                    <strong>
+                        CARGANDO UBICACIÓN...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- VOLVER ARRIBA -->
+
+    <button
+        class="back-to-top magnetic-button"
+        id="backToTop"
+        type="button"
+        aria-label="Volver arriba"
+    >
+        ↑
+    </button>
+
 
     <script src="js/main.js"></script>
+    <script src="js/contacto.js"></script>
 
 </body>
 

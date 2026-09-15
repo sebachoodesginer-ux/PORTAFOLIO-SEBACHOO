@@ -5007,3 +5007,64 @@ body.creative-on
     }
 
 }
+/* =========================================================
+   AJUSTE PERSONAJES - SOLO RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =====================================================
+       PERSONAJE "IDEAS QUE CONECTAN"
+       PEGADO COMPLETAMENTE A LA IZQUIERDA
+    ===================================================== */
+
+    .areas-character-position {
+        position: relative;
+
+        left: -18px !important;
+        right: auto !important;
+
+        width: min(82%, 330px);
+
+        margin:
+            22px auto -24px 0 !important;
+
+        transform: none !important;
+    }
+
+    .areas-character {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    /* =====================================================
+       PERSONAJE "MÁS PROYECTOS AQUÍ"
+       OCULTO SOLO EN RESPONSIVE
+    ===================================================== */
+
+    .featured-character-position {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 470px) {
+
+    /* todavía más pegado al borde izquierdo */
+
+    .areas-character-position {
+        left: -14px !important;
+
+        width: min(88%, 300px);
+
+        margin:
+            20px auto -22px 0 !important;
+    }
+
+}
