@@ -277,10 +277,38 @@ function playIntro() {
 
 }
 
+/* =========================================================
+   INTRO - SOLO ESCRITORIO
+========================================================= */
 
 window.addEventListener(
     "load",
-    playIntro
+    () => {
+
+        if (
+            window.innerWidth <= 700
+        ) {
+
+            if (intro) {
+
+                intro.classList.add(
+                    "finished"
+                );
+
+            }
+
+            body.classList.remove(
+                "page-loading"
+            );
+
+            return;
+
+        }
+
+
+        playIntro();
+
+    }
 );
 
 

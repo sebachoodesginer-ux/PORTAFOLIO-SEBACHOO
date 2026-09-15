@@ -3457,3 +3457,1553 @@ body.creative-on
     }
 
 }
+
+/* =========================================================
+   =========================================================
+   RESPONSIVE FINAL - SEBACHO PORTAFOLIO
+   PEGAR AL FINAL DEL STYLE.CSS
+   =========================================================
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .site-header {
+        height: 105px;
+    }
+
+    .header-inner {
+        width: 92%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .brand {
+        position: relative;
+        z-index: 9200;
+        width: 185px;
+        flex-shrink: 0;
+    }
+
+    .header-actions {
+        position: relative;
+        z-index: 9300;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-crown {
+        display: none;
+    }
+
+
+    /* =========================================
+       BOTÓN HAMBURGUESA MÁS GRANDE
+    ========================================= */
+
+    .mobile-menu-button {
+        position: relative;
+        z-index: 9500;
+
+        display: flex;
+
+        width: 58px;
+        height: 58px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid rgba(255,255,255,.9);
+        border-radius: 50%;
+
+        background:
+            rgba(228,31,30,.95);
+
+        box-shadow:
+            0 7px 20px
+            rgba(0,0,0,.22);
+
+        transition:
+            transform .3s
+            cubic-bezier(.34,1.56,.64,1),
+            background .3s ease;
+    }
+
+
+    .mobile-menu-button:hover {
+        transform:
+            scale(1.08);
+    }
+
+
+    .mobile-menu-button span {
+        display: block;
+
+        width: 29px;
+        height: 3px;
+
+        margin: 3px auto;
+
+        border-radius: 20px;
+
+        background: white;
+
+        transform-origin: center;
+
+        transition:
+            transform .32s ease,
+            opacity .25s ease;
+    }
+
+
+    /* X AL ABRIR */
+
+    .mobile-menu-button.open
+    span:nth-child(1) {
+        transform:
+            translateY(9px)
+            rotate(45deg);
+    }
+
+
+    .mobile-menu-button.open
+    span:nth-child(2) {
+        opacity: 0;
+        transform:
+            scaleX(.2);
+    }
+
+
+    .mobile-menu-button.open
+    span:nth-child(3) {
+        transform:
+            translateY(-9px)
+            rotate(-45deg);
+    }
+
+
+    /* =========================================
+       MENÚ MOBILE
+    ========================================= */
+
+    .main-nav {
+        position: fixed;
+
+        z-index: 9100;
+
+        top: 0;
+        right: -110%;
+
+        width:
+            min(88vw,430px);
+
+        height: 100dvh;
+
+        padding:
+            145px
+            34px
+            45px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content:
+            flex-start;
+
+        gap: 12px;
+
+        overflow-y: auto;
+
+        background-image:
+            url("../img/fondo-web.png");
+
+        background-repeat:
+            repeat;
+
+        background-size:
+            700px auto;
+
+        box-shadow:
+            -18px 0 45px
+            rgba(0,0,0,.38);
+
+        transition:
+            right .42s
+            cubic-bezier(.22,.8,.25,1);
+    }
+
+
+    .main-nav::before {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        z-index: -1;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(228,31,30,.18),
+                rgba(0,0,0,.1)
+            );
+
+        pointer-events: none;
+    }
+
+
+    .main-nav.open {
+        right: 0;
+    }
+
+
+    .nav-link {
+        width: 100%;
+
+        padding:
+            20px 24px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        color: white;
+
+        font-size:
+            1.08rem;
+
+        font-weight: 900;
+
+        text-align: center;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.13);
+    }
+
+
+    .nav-link::before {
+        inset:
+            5px 2px;
+    }
+
+
+    .nav-link:hover {
+        color: #111;
+    }
+
+
+    /* =========================================
+       MODO CREATIVO
+    ========================================= */
+
+    .creative-mode {
+        width: 185px;
+        height: 58px;
+    }
+
+
+    /* =========================================
+       PROYECTOS
+    ========================================= */
+
+    .featured-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --header-height: 90px;
+        --area-icon-size: 86px;
+    }
+
+
+    /* =========================================
+       BASE
+    ========================================= */
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    body {
+        background-image:
+            url("../img/fondo-web.png");
+
+        background-repeat:
+            repeat;
+
+        background-position:
+            center top;
+
+        background-size:
+            700px auto;
+    }
+
+
+    /* =========================================
+       QUITAR INTRO EN MOBILE
+    ========================================= */
+
+    body.page-loading {
+        overflow-y: auto;
+    }
+
+
+    .intro {
+        display: none !important;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .site-header {
+        height:
+            var(--header-height);
+    }
+
+
+    .header-inner {
+        width: 92%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content:
+            space-between;
+    }
+
+
+    .brand {
+        width: 158px;
+    }
+
+
+    .creative-mode {
+        display: none;
+    }
+
+
+    .mobile-menu-button {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    /* =========================================
+       CONTENEDOR GENERAL
+    ========================================= */
+
+    .continuous-page {
+        position: relative;
+
+        z-index: 2;
+
+        width: 100%;
+
+        padding:
+            14px 12px
+            24px;
+    }
+
+
+    /* =========================================
+       SECCIONES
+    ========================================= */
+
+    .visual-section {
+        position: relative;
+
+        width: 100%;
+
+        margin:
+            0 0 18px;
+
+        padding: 0;
+
+        line-height: normal;
+
+        overflow: visible;
+    }
+
+
+    .visual-stage {
+        position: relative;
+
+        width: 100%;
+
+        overflow: visible;
+    }
+
+
+    /* ocultamos las imágenes gigantes
+       que funcionan como fondos de PC */
+
+    .visual-background {
+        display: none;
+    }
+
+
+    /* =========================================
+       CONTENIDO PASA A FLUJO NORMAL
+    ========================================= */
+
+    .hero-content,
+    .featured-content,
+    .areas-content,
+    .about-content {
+
+        position: relative;
+
+        z-index: 50;
+
+        left: auto;
+
+        right: auto;
+
+        top: auto;
+
+        bottom: auto;
+
+        width: 100%;
+
+        height: auto;
+
+        line-height: normal;
+    }
+
+
+    /* =====================================================
+       HERO
+       CUADRO ROJO
+    ===================================================== */
+
+    .hero-section {
+        margin-top: 4px;
+    }
+
+
+    .hero-stage {
+        padding:
+            0;
+    }
+
+
+    .hero-content {
+        padding:
+            34px
+            24px
+            32px;
+
+        overflow: hidden;
+
+        background:
+            var(--red);
+
+        border-radius:
+            23px;
+
+        box-shadow:
+            0 13px 28px
+            rgba(0,0,0,.17);
+    }
+
+
+    .hero-content::before {
+        content: "";
+
+        position: absolute;
+
+        z-index: -1;
+
+        inset: 0;
+
+        opacity: .12;
+
+        background-image:
+            url("../img/fondo-web.png");
+
+        background-size:
+            620px auto;
+
+        pointer-events: none;
+    }
+
+
+    .hero-hello {
+        width:
+            min(100%,390px);
+
+        margin:
+            0 auto 8px;
+    }
+
+
+    .hero-copy {
+        margin-top: 8px;
+
+        text-align: center;
+    }
+
+
+    .hero-copy h1 {
+        margin-bottom: 14px;
+
+        color: white;
+
+        font-size:
+            clamp(
+                1.55rem,
+                7vw,
+                2.15rem
+            );
+
+        line-height: 1.05;
+    }
+
+
+    .hero-copy p {
+        max-width: 500px;
+
+        margin: auto;
+
+        color:
+            rgba(255,255,255,.94);
+
+        font-size:
+            .98rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* =========================================
+       BOTONES HERO
+    ========================================= */
+
+    .hero-buttons {
+        width: 100%;
+
+        margin-top: 25px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 11px;
+    }
+
+
+    .graphic-button {
+        width:
+            min(100%,285px);
+
+        height: 78px;
+    }
+
+
+    /* =====================================================
+       PROYECTOS DESTACADOS
+       CUADRO BEIGE
+    ===================================================== */
+
+    .featured-section {
+        margin-top: 0;
+    }
+
+
+    .featured-stage {
+        padding:
+            0;
+    }
+
+
+    .featured-content {
+        padding:
+            35px
+            18px
+            30px;
+
+        background:
+            #FAF3E6;
+
+        border-radius:
+            23px;
+
+        box-shadow:
+            0 13px 28px
+            rgba(0,0,0,.16);
+    }
+
+
+    .featured-heading {
+        position: relative;
+
+        z-index: 10;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .featured-title {
+        width:
+            min(100%,470px);
+
+        margin:
+            0 auto;
+    }
+
+
+    .featured-heading p {
+        max-width: 500px;
+
+        margin:
+            9px auto 0;
+
+        padding:
+            0 7px;
+
+        color: #222;
+
+        font-size:
+            .94rem;
+
+        line-height: 1.45;
+    }
+
+
+    /* =========================================
+       VER TODOS
+    ========================================= */
+
+    .view-all {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width:
+            min(210px,65%);
+
+        margin:
+            16px auto 20px;
+
+        display: block;
+    }
+
+
+    /* =========================================
+       PERSONAJE PROYECTOS
+    ========================================= */
+
+    .featured-character-position {
+        position: relative;
+
+        z-index: 20;
+
+        left: auto;
+        top: auto;
+
+        width:
+            min(72%,300px);
+
+        max-width: none;
+
+        margin:
+            -6px auto -15px;
+
+        transform: none;
+    }
+
+
+    .featured-character {
+        width: 100%;
+    }
+
+
+    /* =========================================
+       GRID PROYECTOS
+    ========================================= */
+
+    .featured-grid {
+        width: 100%;
+
+        margin-top: 18px;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 24px;
+    }
+
+
+    .project-card {
+        width: 100%;
+
+        color: #111;
+    }
+
+
+    .project-image {
+        aspect-ratio:
+            1.55 / 1;
+
+        margin-bottom: 9px;
+
+        border-radius:
+            15px;
+
+        box-shadow:
+            0 7px 16px
+            rgba(0,0,0,.12);
+    }
+
+
+    /* info visible porque en móvil
+       no existe hover real */
+
+    .project-hover-info {
+        opacity: 1;
+
+        bottom: 11px;
+
+        width:
+            calc(100% - 22px);
+
+        padding:
+            12px 13px;
+
+        border-radius:
+            12px;
+
+        transform:
+            translate(-50%,0)
+            scale(1);
+    }
+
+
+    .project-card > h2 {
+        font-size:
+            .94rem;
+    }
+
+
+    .project-card > p {
+        font-size:
+            .78rem;
+    }
+
+
+    /* =====================================================
+       ÁREAS CREATIVAS
+       CUADRO BEIGE
+    ===================================================== */
+
+    .areas-section {
+        margin-top: 0;
+    }
+
+
+    .areas-stage {
+        padding: 0;
+    }
+
+
+    .areas-content {
+        padding:
+            34px
+            18px
+            30px;
+
+        background:
+            #FAF3E6;
+
+        border-radius:
+            23px;
+
+        box-shadow:
+            0 13px 28px
+            rgba(0,0,0,.16);
+    }
+
+
+    .areas-heading {
+        width: 100%;
+
+        margin:
+            0 auto 25px;
+
+        text-align: center;
+    }
+
+
+    .areas-title {
+        width:
+            min(100%,460px);
+
+        margin: auto;
+    }
+
+
+    .areas-heading p {
+        max-width: 500px;
+
+        margin:
+            10px auto 0;
+
+        padding:
+            0 5px;
+
+        color: #292929;
+
+        font-size:
+            .96rem;
+
+        line-height: 1.45;
+    }
+
+
+    /* =========================================
+       ÁREAS GRID
+    ========================================= */
+
+    .areas-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:
+            25px 10px;
+    }
+
+
+    .area-item {
+        min-height: 0;
+
+        padding:
+            5px 8px
+            12px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content:
+            flex-start;
+
+        color: #111;
+
+        text-align: center;
+    }
+
+
+    .area-item::after {
+        display: none !important;
+    }
+
+
+    .area-icon {
+        width:
+            var(--area-icon-size);
+
+        height:
+            var(--area-icon-size);
+
+        margin-bottom:
+            12px;
+    }
+
+
+    .area-item h3 {
+        font-size:
+            .98rem;
+
+        line-height: 1.15;
+    }
+
+
+    .area-item p {
+        max-width: 180px;
+
+        margin-top: 7px;
+
+        font-size:
+            .77rem;
+
+        line-height: 1.38;
+    }
+
+
+    /* =========================================
+       PERSONAJE ÁREAS
+    ========================================= */
+
+    .areas-character-position {
+        position: relative;
+
+        z-index: 20;
+
+        right: auto;
+        top: auto;
+
+        width:
+            min(75%,315px);
+
+        max-width: none;
+
+        margin:
+            22px auto -24px;
+
+        transform: none;
+    }
+
+
+    .areas-character {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       SOBRE MÍ
+       CUADRO ROJO
+    ===================================================== */
+
+    .about-section {
+        margin-top: 0;
+    }
+
+
+    .about-stage {
+        position: relative;
+
+        min-height: 0;
+
+        padding: 0;
+
+        overflow: visible;
+    }
+
+
+    .about-background {
+        display: none;
+    }
+
+
+    .about-content {
+        position: relative;
+
+        z-index: 30;
+
+        padding:
+            35px
+            24px
+            310px;
+
+        overflow: hidden;
+
+        background:
+            var(--red);
+
+        border-radius:
+            23px;
+
+        color: white;
+
+        box-shadow:
+            0 13px 28px
+            rgba(0,0,0,.18);
+    }
+
+
+    .about-content::before {
+        content: "";
+
+        position: absolute;
+
+        z-index: -1;
+
+        inset: 0;
+
+        opacity: .11;
+
+        background-image:
+            url("../img/fondo-web.png");
+
+        background-size:
+            650px auto;
+
+        pointer-events: none;
+    }
+
+
+    .about-title {
+        width:
+            min(100%,420px);
+
+        margin:
+            0 auto 16px;
+    }
+
+
+    .about-content p {
+        max-width: 520px;
+
+        margin:
+            0 auto 11px;
+
+        color:
+            rgba(255,255,255,.95);
+
+        font-size:
+            .96rem;
+
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+    /* =========================================
+       BOTÓN SOBRE MI
+    ========================================= */
+
+    .about-button {
+        width:
+            min(280px,90%);
+
+        height: 80px;
+
+        margin:
+            20px auto 0;
+    }
+
+
+    /* =========================================
+       PERSONAJE SOBRE MI
+    ========================================= */
+
+    .about-character-position {
+        position: absolute;
+
+        z-index: 45;
+
+        left: 50%;
+
+        bottom: 18px;
+
+        width:
+            min(62%,280px);
+
+        max-width: none;
+
+        transform:
+            translateX(-50%);
+    }
+
+
+    .about-character {
+        width: 100%;
+    }
+
+
+    .about-footer-fade {
+        display: none;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+        min-height: 0;
+
+        margin-top: 0;
+
+        padding:
+            32px
+            18px
+            20px;
+    }
+
+
+    .footer-inner {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+
+    .footer-logo {
+        width:
+            min(250px,80%);
+    }
+
+
+    .footer-nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap:
+            13px 20px;
+    }
+
+
+    .footer-nav a {
+        font-size:
+            .9rem;
+    }
+
+
+    .footer-socials {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 11px;
+    }
+
+
+    .footer-socials a {
+        width: 49px;
+        height: 49px;
+    }
+
+
+    .footer-copy {
+        width: 100%;
+
+        margin-top: 15px;
+
+        text-align: center;
+
+        font-size:
+            .68rem;
+    }
+
+
+    /* =========================================
+       VOLVER ARRIBA
+    ========================================= */
+
+    .back-to-top {
+        right: 15px;
+
+        bottom: 15px;
+
+        width: 52px;
+
+        height: 52px;
+    }
+
+
+    /* =====================================================
+       ANIMACIONES DE ENTRADA DESACTIVADAS
+       EN RESPONSIVE
+    ===================================================== */
+
+    .reveal-item,
+    .reveal-up,
+    .reveal-left,
+    .reveal-right,
+    .reveal-pop {
+
+        opacity: 1 !important;
+
+        transform:
+            none !important;
+
+        transition:
+            none !important;
+
+        transition-delay:
+            0ms !important;
+    }
+
+
+    /* evita movimientos del modo creativo
+       que puedan afectar composición mobile */
+
+    body.creative-on
+    .creative-text,
+
+    body.creative-on
+    .creative-button-one,
+
+    body.creative-on
+    .creative-button-two,
+
+    body.creative-on
+    .creative-small-button,
+
+    body.creative-on
+    .creative-title-one,
+
+    body.creative-on
+    .creative-character-left,
+
+    body.creative-on
+    .creative-areas-title,
+
+    body.creative-on
+    .creative-areas-character,
+
+    body.creative-on
+    .creative-icon-one,
+
+    body.creative-on
+    .creative-icon-two,
+
+    body.creative-on
+    .creative-icon-three,
+
+    body.creative-on
+    .creative-icon-four,
+
+    body.creative-on
+    .creative-about-title,
+
+    body.creative-on
+    .creative-about-button,
+
+    body.creative-on
+    .creative-about-character {
+
+        animation:
+            none !important;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 470px) {
+
+    :root {
+        --area-icon-size:
+            80px;
+    }
+
+
+    .continuous-page {
+        padding:
+            10px
+            9px
+            20px;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .brand {
+        width: 145px;
+    }
+
+
+    .mobile-menu-button {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .mobile-menu-button span {
+        width: 26px;
+    }
+
+
+    .main-nav {
+        width: 90vw;
+
+        padding:
+            125px
+            24px
+            40px;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero-content {
+        padding:
+            28px
+            18px
+            27px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .hero-copy h1 {
+        font-size:
+            1.52rem;
+    }
+
+
+    .hero-copy p {
+        font-size:
+            .91rem;
+    }
+
+
+    .graphic-button {
+        width: 100%;
+
+        max-width: 270px;
+
+        height: 72px;
+    }
+
+
+    /* =========================================
+       PROYECTOS
+    ========================================= */
+
+    .featured-content {
+        padding:
+            29px
+            14px
+            25px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .featured-heading p {
+        font-size:
+            .89rem;
+    }
+
+
+    .featured-character-position {
+        width:
+            min(76%,270px);
+    }
+
+
+    .project-image {
+        aspect-ratio:
+            1.45 / 1;
+    }
+
+
+    /* =========================================
+       AREAS
+    ========================================= */
+
+    .areas-content {
+        padding:
+            29px
+            12px
+            25px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .areas-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:
+            24px 5px;
+    }
+
+
+    .area-item {
+        padding:
+            4px 4px
+            10px;
+    }
+
+
+    .area-item h3 {
+        font-size:
+            .88rem;
+    }
+
+
+    .area-item p {
+        max-width: 150px;
+
+        font-size:
+            .7rem;
+    }
+
+
+    .areas-character-position {
+        width:
+            min(80%,280px);
+    }
+
+
+    /* =========================================
+       SOBRE MI
+    ========================================= */
+
+    .about-content {
+        padding:
+            29px
+            18px
+            285px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .about-content p {
+        font-size:
+            .9rem;
+    }
+
+
+    .about-character-position {
+        bottom: 14px;
+
+        width:
+            min(66%,255px);
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    .footer-nav {
+        gap:
+            11px 15px;
+    }
+
+
+    .footer-nav a {
+        font-size:
+            .82rem;
+    }
+
+}
+
+
+
+/* =========================================================
+   TELÉFONOS MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .brand {
+        width: 128px;
+    }
+
+
+    .mobile-menu-button {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .hero-content,
+    .featured-content,
+    .areas-content,
+    .about-content {
+
+        border-radius:
+            16px;
+    }
+
+
+    .hero-copy h1 {
+        font-size:
+            1.35rem;
+    }
+
+
+    .areas-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .area-item p {
+        max-width:
+            220px;
+    }
+
+
+    .about-content {
+        padding-bottom:
+            270px;
+    }
+
+}
