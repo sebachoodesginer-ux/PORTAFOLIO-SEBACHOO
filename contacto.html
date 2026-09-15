@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -22,26 +23,52 @@
         href="./img/web.png"
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contacto.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/contacto.css"
+    >
+
 </head>
+
 
 <body class="contact-page">
 
-    <!-- CURSOR -->
+
+    <!-- =====================================================
+         CURSOR
+    ====================================================== -->
+
     <div
         class="custom-cursor"
         id="customCursor"
         aria-hidden="true"
     ></div>
+
+
+    <!-- =====================================================
+         PARTÍCULAS
+    ====================================================== -->
 
     <canvas
         id="globalParticles"
@@ -60,7 +87,11 @@
 
         <div class="header-background"></div>
 
+
         <div class="header-inner">
+
+
+            <!-- LOGO -->
 
             <a
                 href="index.html"
@@ -71,13 +102,15 @@
 
                 <img
                     src="img/inicio/logo-sebacho.png"
-                    alt="Sebacho"
+                    alt="Sebacho Portafolio"
                     class="floating-logo"
                     draggable="false"
                 >
 
             </a>
 
+
+            <!-- NAVEGACIÓN -->
 
             <nav
                 class="main-nav"
@@ -115,6 +148,8 @@
             </nav>
 
 
+            <!-- ACCIONES -->
+
             <div class="header-actions">
 
                 <button
@@ -137,7 +172,9 @@
                     </span>
 
                     <span class="creative-switch">
+
                         <span class="creative-switch-dot"></span>
+
                     </span>
 
                 </button>
@@ -146,12 +183,14 @@
                 <img
                     src="img/inicio/corona.png"
                     alt=""
-                    class="header-crown creative-crown"
+                    class="header-crown creative-extra-resource"
                     draggable="false"
                 >
 
             </div>
 
+
+            <!-- HAMBURGUESA -->
 
             <button
                 class="mobile-menu-button"
@@ -160,9 +199,11 @@
                 aria-label="Abrir menú"
                 aria-expanded="false"
             >
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
         </div>
@@ -170,16 +211,19 @@
     </header>
 
 
+
     <!-- =====================================================
-         CONTACTO
+         MAIN
     ====================================================== -->
 
     <main class="contact-main">
+
 
         <section
             class="contact-layout"
             id="contacto"
         >
+
 
             <!-- RECURSO SUPERIOR -->
 
@@ -188,11 +232,12 @@
                 <img
                     src="img/contacto/menu-superior.png"
                     alt=""
-                    class="contact-menu-superior"
+                    class="contact-menu-superior creative-extra-resource"
                     draggable="false"
                 >
 
             </div>
+
 
 
             <!-- =================================================
@@ -209,38 +254,41 @@
                     <img
                         src="img/contacto/fondo-rojo.png"
                         alt=""
-                        class="contact-red-background"
+                        class="contact-red-background creative-extra-resource"
                         draggable="false"
                     >
 
                     <img
                         src="img/contacto/Titulo-hablemos.png"
-                        alt="Hablemos"
-                        class="contact-hablemos contact-animate creative-title"
+                        alt="¡Hablemos!"
+                        class="contact-hablemos contact-animate creative-title-resource"
                         draggable="false"
                     >
 
                 </section>
 
 
+
                 <!-- =================================================
-                     FORMULARIO
+                     CENTRO / FORMULARIO
                 ================================================== -->
 
                 <section class="contact-center">
 
+
                     <div
-                        class="contact-beige-background contact-beige-background-center"
+                        class="contact-beige-background contact-beige-background-center creative-paper"
                         aria-hidden="true"
                     ></div>
 
 
                     <div class="contact-center-content">
 
+
                         <img
                             src="img/contacto/titulo-mensaje.png"
                             alt="Envíame un mensaje"
-                            class="contact-message-title contact-animate creative-title"
+                            class="contact-message-title contact-animate creative-title-resource"
                             draggable="false"
                         >
 
@@ -250,9 +298,14 @@
                             id="contactForm"
                         >
 
-                            <label class="contact-field field-one">
 
-                                <span class="field-icon">●</span>
+                            <!-- NOMBRE -->
+
+                            <label class="contact-field">
+
+                                <span class="field-icon">
+                                    ●
+                                </span>
 
                                 <input
                                     type="text"
@@ -266,9 +319,13 @@
                             </label>
 
 
-                            <label class="contact-field field-two">
+                            <!-- EMAIL -->
 
-                                <span class="field-icon">✉</span>
+                            <label class="contact-field">
+
+                                <span class="field-icon">
+                                    ✉
+                                </span>
 
                                 <input
                                     type="email"
@@ -282,9 +339,13 @@
                             </label>
 
 
-                            <label class="contact-field field-three">
+                            <!-- PROYECTO -->
 
-                                <span class="field-icon">▣</span>
+                            <label class="contact-field">
+
+                                <span class="field-icon">
+                                    ▣
+                                </span>
 
                                 <select
                                     id="contactProject"
@@ -337,11 +398,15 @@
                             </label>
 
 
+                            <!-- MENSAJE -->
+
                             <label
-                                class="contact-field contact-field-message field-four"
+                                class="contact-field contact-field-message"
                             >
 
-                                <span class="field-icon">◌</span>
+                                <span class="field-icon">
+                                    ◌
+                                </span>
 
                                 <textarea
                                     id="contactMessage"
@@ -353,9 +418,11 @@
                             </label>
 
 
+                            <!-- ENVIAR -->
+
                             <button
                                 type="submit"
-                                class="contact-send-button magnetic-button"
+                                class="contact-send-button magnetic-button creative-button"
                                 id="contactSubmitButton"
                             >
 
@@ -374,51 +441,66 @@
                 </section>
 
 
+
                 <!-- =================================================
                      DERECHA
                 ================================================== -->
 
                 <aside class="contact-right">
 
+
                     <div
-                        class="contact-beige-background contact-beige-background-right"
+                        class="contact-beige-background contact-beige-background-right creative-paper"
                         aria-hidden="true"
                     ></div>
 
 
                     <div class="contact-right-content">
 
+
                         <img
                             src="img/contacto/titulo-contactame-por.png"
                             alt="También puedes contactarme por"
-                            class="contact-info-title contact-animate creative-title"
+                            class="contact-info-title contact-animate creative-title-resource"
                             draggable="false"
                         >
 
 
                         <div class="contact-methods">
 
+
                             <a
                                 href="https://wa.me/573243622158"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="contact-method magnetic-button method-whatsapp"
+                                class="contact-method magnetic-button"
                             >
-                                <span class="method-icon">W</span>
-                                <span>WhatsApp</span>
+
+                                <span class="method-icon">
+                                    W
+                                </span>
+
+                                <span>
+                                    WhatsApp
+                                </span>
+
                             </a>
 
 
                             <a
                                 href="mailto:sebachoo.desginer@gmail.com?subject=Contacto%20desde%20tu%20portafolio"
-                                class="contact-method magnetic-button method-email"
+                                class="contact-method magnetic-button"
                             >
 
-                                <span class="method-icon">✉</span>
+                                <span class="method-icon">
+                                    ✉
+                                </span>
 
                                 <span class="contact-method-text">
 
-                                    <strong>Email</strong>
+                                    <strong>
+                                        Email
+                                    </strong>
 
                                     <small>
                                         sebachoo.desginer@gmail.com
@@ -433,10 +515,17 @@
                                 href="https://www.linkedin.com/in/ssebachoo-designer-447608274/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="contact-method magnetic-button method-linkedin"
+                                class="contact-method magnetic-button"
                             >
-                                <span class="method-icon">in</span>
-                                <span>LinkedIn</span>
+
+                                <span class="method-icon">
+                                    in
+                                </span>
+
+                                <span>
+                                    LinkedIn
+                                </span>
+
                             </a>
 
 
@@ -444,10 +533,17 @@
                                 href="https://www.instagram.com/sebbacho/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="contact-method magnetic-button method-instagram"
+                                class="contact-method magnetic-button"
                             >
-                                <span class="method-icon">IG</span>
-                                <span>Instagram</span>
+
+                                <span class="method-icon">
+                                    IG
+                                </span>
+
+                                <span>
+                                    Instagram
+                                </span>
+
                             </a>
 
 
@@ -455,10 +551,17 @@
                                 href="https://www.behance.net/skullrex00reli"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="contact-method magnetic-button method-behance"
+                                class="contact-method magnetic-button"
                             >
-                                <span class="method-icon">Bē</span>
-                                <span>Behance</span>
+
+                                <span class="method-icon">
+                                    Bē
+                                </span>
+
+                                <span>
+                                    Behance
+                                </span>
+
                             </a>
 
                         </div>
@@ -469,7 +572,7 @@
                             <img
                                 src="img/contacto/logo-colombia.png"
                                 alt="Colombia"
-                                class="location-colombia-logo"
+                                class="location-colombia-logo creative-extra-resource"
                                 draggable="false"
                             >
 
@@ -494,11 +597,13 @@
             </div>
 
 
+
             <!-- =================================================
                  PARTE INFERIOR
             ================================================== -->
 
             <div class="contact-bottom">
+
 
                 <section class="contact-empty-area"></section>
 
@@ -509,28 +614,26 @@
 
                     <div class="meeting-content">
 
-                        <h2 class="meeting-title">
+                        <h2 class="meeting-title creative-text">
                             ¿PREFIERES UNA REUNIÓN?
                         </h2>
-
 
                         <p class="meeting-description">
 
                             Podemos agendar una
 
-                            <strong>videollamada</strong>
+                            <strong>
+                                videollamada
+                            </strong>
 
-                            para conocer más sobre tu proyecto y explorar
-                            cómo podemos trabajar juntos.
+                            para conocer más sobre tu proyecto y explorar cómo podemos trabajar juntos.
 
                         </p>
 
 
-                        <!-- CALENDARIO -->
-
                         <button
                             type="button"
-                            class="meeting-button magnetic-button"
+                            class="meeting-button magnetic-button creative-button"
                             id="openCalendarModal"
                             aria-label="Agendar una reunión"
                         >
@@ -544,11 +647,9 @@
                         </button>
 
 
-                        <!-- UBICACIÓN -->
-
                         <button
                             type="button"
-                            class="meeting-location magnetic-button"
+                            class="meeting-location magnetic-button creative-button"
                             id="openLocationModal"
                             aria-label="Ver ubicación"
                         >
@@ -585,6 +686,7 @@
                 </section>
 
 
+
                 <!-- PERSONAJE GRACIAS -->
 
                 <section class="contact-thanks">
@@ -592,13 +694,14 @@
                     <img
                         src="img/contacto/personaje-gracias.png"
                         alt="Gracias por pasar por aquí"
-                        class="thanks-character"
+                        class="thanks-character creative-character-thanks"
                         draggable="false"
                     >
 
                 </section>
 
             </div>
+
 
 
             <!-- =================================================
@@ -610,22 +713,24 @@
                 <img
                     src="img/contacto/footer-izquierda.png"
                     alt=""
-                    class="contact-footer-left"
+                    class="contact-footer-left creative-footer-resource"
                     draggable="false"
                 >
 
                 <img
                     src="img/contacto/footer-derecha.png"
                     alt=""
-                    class="contact-footer-right"
+                    class="contact-footer-right creative-footer-resource"
                     draggable="false"
                 >
 
             </div>
 
 
+
             <!-- =================================================
                  LISTA
+                 SE CONSERVA COMO ESTABA
             ================================================== -->
 
             <div class="contact-list-layer">
@@ -633,15 +738,17 @@
                 <img
                     src="img/contacto/lista-aqui-estoy.png"
                     alt="Aquí estoy"
-                    class="contact-list contact-animate"
+                    class="contact-list contact-animate creative-list"
                     draggable="false"
                 >
 
             </div>
 
 
+
             <!-- =================================================
-                 PERSONAJE IZQUIERDO
+                 PERSONAJE PRINCIPAL
+                 SE CONSERVA COMO ESTABA
             ================================================== -->
 
             <div class="contact-character-layer">
@@ -649,7 +756,7 @@
                 <img
                     src="img/contacto/personaje-cuentame-tu-idea.png"
                     alt="Cuéntame tu idea"
-                    class="contact-character contact-animate"
+                    class="contact-character contact-animate creative-character-main"
                     draggable="false"
                 >
 
@@ -660,21 +767,25 @@
     </main>
 
 
+
     <!-- =====================================================
          FOOTER
     ====================================================== -->
 
     <footer class="footer">
 
+
         <canvas
             id="footerFire"
             class="footer-fire"
         ></canvas>
 
+
         <div class="footer-red-glow"></div>
 
 
         <div class="footer-inner">
+
 
             <a
                 href="index.html"
@@ -745,13 +856,14 @@
 
         <p class="footer-copy">
 
-            © <span id="currentYear"></span>
-            Sebastián Ramírez.
-            Todos los derechos reservados.
+            ©
+            <span id="currentYear"></span>
+            Sebastián Ramírez. Todos los derechos reservados.
 
         </p>
 
     </footer>
+
 
 
     <!-- =====================================================
@@ -763,10 +875,13 @@
         id="contactToast"
         role="status"
         aria-live="polite"
+        aria-atomic="true"
     >
 
         <div class="contact-toast-icon">
+
             <span class="toast-loader"></span>
+
         </div>
 
 
@@ -801,6 +916,7 @@
     </div>
 
 
+
     <!-- =====================================================
          MODAL CALENDARIO
     ====================================================== -->
@@ -823,6 +939,7 @@
             aria-modal="true"
             aria-labelledby="calendarModalTitle"
         >
+
 
             <header class="seb-modal-header">
 
@@ -895,6 +1012,7 @@
     </div>
 
 
+
     <!-- =====================================================
          MODAL UBICACIÓN
     ====================================================== -->
@@ -917,6 +1035,7 @@
             aria-modal="true"
             aria-labelledby="locationModalTitle"
         >
+
 
             <header class="seb-modal-header">
 
@@ -971,7 +1090,10 @@
     </div>
 
 
-    <!-- VOLVER ARRIBA -->
+
+    <!-- =====================================================
+         VOLVER ARRIBA
+    ====================================================== -->
 
     <button
         class="back-to-top magnetic-button"
@@ -982,6 +1104,11 @@
         ↑
     </button>
 
+
+
+    <!-- =====================================================
+         JS
+    ====================================================== -->
 
     <script src="js/main.js"></script>
     <script src="js/contacto.js"></script>
