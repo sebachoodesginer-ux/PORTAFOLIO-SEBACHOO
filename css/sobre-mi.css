@@ -1,0 +1,2390 @@
+/* =========================================================
+   SOBRE MÍ — SEBACHO
+========================================================= */
+
+:root {
+    --about-red: #d01317;
+    --about-red-bright: #f20c25;
+    --about-black: #080808;
+    --about-beige: #faf3e6;
+    --about-white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.about-page {
+    margin: 0;
+    overflow-x: hidden;
+    background: #080808;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+    box-sizing: border-box;
+}
+
+.about-main {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    background: #080808;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.about-page .site-header {
+    position: relative;
+    z-index: 100000;
+}
+
+.about-page .header-inner {
+    position: relative;
+    z-index: 100001;
+}
+
+.about-page .main-nav {
+    z-index: 100002;
+}
+
+.about-page .mobile-menu-button {
+    z-index: 100003;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.about-reveal {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition:
+        opacity .75s ease,
+        transform .75s cubic-bezier(.2, .8, .2, 1);
+}
+
+.about-reveal.about-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   HERO DESKTOP
+========================================================= */
+
+.about-hero {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+}
+
+.about-hero-background {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
+.about-hero-content {
+    position: absolute;
+    z-index: 5;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.about-hero-copy {
+    position: absolute;
+    z-index: 15;
+    left: 37%;
+    top: 13%;
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    pointer-events: auto;
+}
+
+.about-title {
+    display: block;
+    width: min(100%, 560px);
+    height: auto;
+    margin: 0 0 18px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .22));
+    transform-origin: center;
+}
+
+.about-hero-text {
+    width: 100%;
+    max-width: 560px;
+}
+
+.about-hero-text h1 {
+    width: 100%;
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: clamp(1rem, 1.45vw, 1.7rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-hero-text h1 strong {
+    font-weight: 900;
+}
+
+.about-hero-text p {
+    width: 100%;
+    max-width: 540px;
+    margin: 0;
+    color: rgba(255, 255, 255, .93);
+    font-size: clamp(.72rem, .9vw, 1rem);
+    line-height: 1.5;
+}
+
+.about-button-wrapper {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.about-primary-button,
+.final-project-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 11px;
+    background: var(--about-red-bright);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    box-shadow: 0 12px 28px rgba(242, 12, 37, .18);
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+    transform: translate3d(0, 0, 0);
+}
+
+.about-primary-button {
+    min-width: clamp(210px, 15vw, 285px);
+    min-height: clamp(58px, 3.7vw, 70px);
+    padding: 15px 34px;
+    font-size: clamp(.78rem, .9vw, 1rem);
+}
+
+.about-primary-button:hover,
+.final-project-button:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 15px 30px rgba(242, 12, 37, .28);
+}
+
+.about-primary-button span,
+.final-project-button span {
+    font-size: 1.2em;
+}
+
+.about-sebastian {
+    position: absolute;
+    z-index: 20;
+    top: 3.5%;
+    right: 3.5%;
+    width: 28%;
+    pointer-events: none;
+}
+
+.sebastian-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 28px rgba(0, 0, 0, .30));
+    transform-origin: center bottom;
+}
+
+.section-background {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =========================================================
+   MI HISTORIA — DESKTOP
+========================================================= */
+
+.history-section {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    min-height: clamp(510px, 35vw, 670px);
+    margin: 0;
+    overflow: hidden;
+    color: #111;
+}
+
+.history-background {
+    z-index: 1;
+    object-fit: fill;
+    object-position: center top;
+}
+
+.history-content {
+    position: relative;
+    z-index: 5;
+    width: min(94%, 1740px);
+    min-height: clamp(510px, 35vw, 670px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 32% 68%;
+    align-items: center;
+    gap: 0;
+    padding:
+        clamp(30px, 2.3vw, 45px)
+        0
+        clamp(55px, 4vw, 80px);
+}
+
+.history-copy {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate3d(0, -66px, 0);
+}
+
+.history-title {
+    display: block;
+    width: min(108%, 540px);
+    height: auto;
+    margin: 0 0 20px -3%;
+    object-fit: contain;
+    filter: drop-shadow(0 7px 8px rgba(0, 0, 0, .08));
+    transform-origin: center;
+}
+
+.history-text {
+    width: 100%;
+    max-width: 480px;
+}
+
+.history-text p {
+    width: 100%;
+    margin: 0 0 14px;
+    color: #181818;
+    font-size: clamp(.86rem, .89vw, 1.02rem);
+    font-weight: 600;
+    line-height: 1.48;
+}
+
+.history-text p:last-child {
+    margin-bottom: 0;
+}
+
+.history-resource-area {
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    min-height: clamp(450px, 32vw, 610px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.history-resource {
+    display: block;
+    width: 124%;
+    max-width: 1370px;
+    height: auto;
+    max-height: clamp(535px, 38vw, 700px);
+    margin: -25px -12% 0 0;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 15px 22px rgba(0, 0, 0, .12));
+    transform-origin: center;
+}
+
+
+/* =========================================================
+   DATOS RÁPIDOS — DESKTOP
+========================================================= */
+
+.quick-section {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    margin-top: -72px;
+    padding: 0 4.5% 5px;
+    color: #fff;
+    overflow: visible;
+}
+
+.quick-title {
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: min(760px, 70vw);
+    height: auto;
+    margin: 0 auto;
+    transform: translate3d(0, -92px, 0);
+    filter: drop-shadow(0 16px 22px rgba(0, 0, 0, .34));
+}
+
+.quick-grid {
+    position: relative;
+    z-index: 10;
+    width: min(100%, 1550px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    transform: translate3d(0, -55px, 0);
+}
+
+.quick-card {
+    position: relative;
+    min-height: 180px;
+    padding: 5px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    border-right: 2px solid rgba(255, 255, 255, .20);
+    transition:
+        transform .25s ease,
+        background .25s ease;
+    transform: translate3d(0, 0, 0);
+}
+
+.quick-card:last-child {
+    border-right: 0;
+}
+
+.quick-card:hover {
+    transform: translate3d(0, -7px, 0);
+    background: rgba(255, 255, 255, .025);
+}
+
+.quick-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 82px;
+    margin: 2px 0 15px;
+    border: 1.5px solid rgba(255, 255, 255, .72);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .035);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+.quick-icon svg {
+    width: 41px;
+    height: 41px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.65;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.quick-card strong {
+    color: #fff;
+    font-size: clamp(.78rem, .92vw, 1.02rem);
+    font-weight: 900;
+}
+
+.quick-card small {
+    display: block;
+    margin-top: 7px;
+    color: rgba(255, 255, 255, .68);
+    font-size: clamp(.64rem, .72vw, .8rem);
+}
+
+
+/* =========================================================
+   HABILIDADES — DESKTOP
+========================================================= */
+
+.skills-section {
+    position: relative;
+    z-index: 35;
+    width: 100%;
+    margin-top: -88px;
+    min-height: clamp(530px, 34vw, 650px);
+    overflow: hidden;
+    color: #111;
+}
+
+.skills-background {
+    z-index: 1;
+    object-fit: fill;
+    object-position: center;
+}
+
+.skills-grid {
+    position: relative;
+    z-index: 5;
+    width: min(88%, 1500px);
+    min-height: clamp(530px, 34vw, 650px);
+    margin: 0 auto;
+    padding:
+        clamp(58px, 4vw, 72px)
+        0
+        clamp(90px, 6vw, 120px);
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    gap: clamp(60px, 5vw, 90px);
+    align-items: start;
+    transform: translate3d(0, -48px, 0);
+}
+
+.skills-column {
+    width: 100%;
+    padding-right: clamp(45px, 4vw, 70px);
+    border-right: 3px solid rgba(20, 20, 20, .27);
+}
+
+.skills-title,
+.tools-title {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+.skills-title {
+    width: min(92%, 565px);
+    margin: 0 0 20px;
+}
+
+.tools-title {
+    width: min(94%, 555px);
+    margin: 0 0 26px;
+}
+
+.skill-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 6px;
+    color: #151515;
+    font-size: clamp(.80rem, .86vw, .96rem);
+    font-weight: 700;
+}
+
+.skill-percent {
+    min-width: 46px;
+    color: var(--about-red);
+    text-align: right;
+    font-weight: 900;
+}
+
+.skill-track {
+    position: relative;
+    width: 100%;
+    height: 18px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(20, 20, 20, .20);
+}
+
+.skill-progress {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    background:
+        linear-gradient(
+            90deg,
+            #d01317,
+            #f20c25,
+            #ff3144
+        );
+    transition: width 1.25s cubic-bezier(.2, .8, .2, 1);
+}
+
+.skill-progress::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 28%;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, .46),
+            transparent
+        );
+    transform: translate3d(-150%, 0, 0);
+    animation:
+        skillShineOptimized
+        3s
+        ease-in-out
+        infinite;
+}
+
+@keyframes skillShineOptimized {
+    0%,
+    22% {
+        transform: translate3d(-150%, 0, 0);
+    }
+
+    65%,
+    100% {
+        transform: translate3d(430%, 0, 0);
+    }
+}
+
+.tools-column {
+    width: 100%;
+    padding-left: clamp(5px, 1vw, 15px);
+}
+
+.tools-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: clamp(14px, 1.2vw, 19px);
+}
+
+.tool-card {
+    min-height: clamp(140px, 8vw, 158px);
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(18, 18, 18, .17);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .20);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.tool-card:hover {
+    transform: translate3d(0, -6px, 0);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, .08);
+}
+
+.software-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    border-radius: 18px;
+    background: #0b0b0b;
+    color: #fff;
+    font-size: clamp(1.45rem, 1.6vw, 1.85rem);
+    font-weight: 900;
+    box-shadow: 0 9px 18px rgba(0, 0, 0, .18);
+}
+
+.tool-card strong {
+    color: #111;
+    font-size: clamp(.68rem, .72vw, .8rem);
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MI CAMINO — DESKTOP
+========================================================= */
+
+.journey-section {
+    position: relative;
+    z-index: 40;
+    width: 100%;
+    margin-top: -85px;
+    padding:
+        0 2.2%
+        clamp(65px, 4vw, 85px);
+    overflow: visible;
+    background: #080808;
+    color: #fff;
+}
+
+.journey-title {
+    position: relative;
+    z-index: 50;
+    display: block;
+    width: min(760px, 70vw);
+    height: auto;
+    margin: 0 auto 4px;
+    transform: translate3d(0, -72px, 0);
+    filter: drop-shadow(0 16px 22px rgba(0, 0, 0, .34));
+}
+
+.journey-description {
+    max-width: 1100px;
+    margin: -34px auto 55px;
+    text-align: center;
+    color: rgba(255, 255, 255, .82);
+    font-size: clamp(.8rem, .92vw, 1.03rem);
+    white-space: nowrap;
+}
+
+.timeline {
+    position: relative;
+    width: min(99%, 1850px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+    gap: clamp(24px, 2vw, 42px);
+}
+
+.timeline-line {
+    position: absolute;
+    top: 21px;
+    left: .5%;
+    right: .5%;
+    height: 5px;
+    border-radius: 999px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, .18),
+            #fff 4%,
+            #fff 96%,
+            rgba(255, 255, 255, .18)
+        );
+}
+
+.timeline-item {
+    position: relative;
+    padding: 66px 5px 20px;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 39px;
+    height: 39px;
+    border: 7px solid #080808;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 0 0 2px
+        rgba(255, 255, 255, .55);
+}
+
+.timeline-year {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    border-radius: 7px;
+    background: var(--about-red-bright);
+    color: #fff;
+    font-size: clamp(.66rem, .72vw, .8rem);
+    font-weight: 900;
+}
+
+.timeline-item strong {
+    display: block;
+    max-width: 235px;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: clamp(.85rem, .94vw, 1.08rem);
+    font-weight: 900;
+}
+
+.timeline-item p {
+    max-width: 235px;
+    margin: 0;
+    color: rgba(255, 255, 255, .68);
+    font-size: clamp(.66rem, .75vw, .83rem);
+    line-height: 1.48;
+}
+
+
+/* =========================================================
+   MÁS QUE DISEÑO — DESKTOP
+========================================================= */
+
+.more-section {
+    position: relative;
+    z-index: 45;
+    width: 100%;
+    min-height: clamp(380px, 26vw, 500px);
+    margin-top: -18px;
+    overflow: hidden;
+    color: #111;
+}
+
+.more-background {
+    z-index: 1;
+    object-fit: fill;
+}
+
+.more-content {
+    position: relative;
+    z-index: 5;
+    width: min(92%, 1650px);
+    min-height: clamp(380px, 26vw, 500px);
+    margin: 0 auto;
+    padding:
+        clamp(18px, 1.2vw, 25px)
+        0
+        clamp(65px, 4vw, 85px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate3d(0, 5px, 0);
+}
+
+.more-title {
+    display: block;
+    width: min(680px, 52vw);
+    height: auto;
+    margin: 0 auto;
+}
+
+.more-description {
+    width: 100%;
+    margin: -2px auto 7px;
+    text-align: center;
+    color: #171717;
+    white-space: nowrap;
+}
+
+.more-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(8, minmax(0, 1fr));
+    gap: clamp(8px, .65vw, 13px);
+}
+
+.more-card {
+    min-height: clamp(125px, 8vw, 150px);
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid rgba(15, 15, 15, .18);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .20);
+    text-align: center;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.more-card:hover {
+    transform: translate3d(0, -6px, 0);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, .07);
+}
+
+.more-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(62px, 4vw, 74px);
+    height: clamp(62px, 4vw, 74px);
+    border: 2px solid #111;
+    border-radius: 18px;
+    color: #111;
+    font-size: clamp(1.45rem, 1.65vw, 1.85rem);
+}
+
+.more-card strong {
+    color: #111;
+    font-size: clamp(.67rem, .72vw, .82rem);
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BANNER FINAL — DESKTOP
+========================================================= */
+
+.about-final {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    margin-top: -55px;
+    margin-bottom: clamp(-45px, -2.5vw, -20px);
+    overflow: visible;
+}
+
+.about-final-picture {
+    display: block;
+    width: 100%;
+}
+
+.about-final-background {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.about-final-content {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    right: -1.5%;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.final-project-button {
+    width: clamp(270px, 21vw, 390px);
+    min-height: clamp(60px, 4.3vw, 78px);
+    padding: 16px 38px;
+    font-size: clamp(.82rem, 1vw, 1.08rem);
+    pointer-events: auto;
+}
+
+.about-footer {
+    position: relative;
+    z-index: 50;
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   MODO CREATIVO
+========================================================= */
+
+body.creative-on .creative-about-title,
+body.creative-on .creative-banner-photo,
+body.creative-on .creative-history-resource,
+body.creative-on .creative-about-button,
+body.creative-on .creative-quick-card,
+body.creative-on .creative-tool,
+body.creative-on .creative-timeline-item,
+body.creative-on .creative-more-card,
+body.creative-on .creative-final-banner {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+body.creative-on .about-title {
+    filter:
+        drop-shadow(0 0 7px rgba(255, 255, 255, .38))
+        drop-shadow(0 0 14px rgba(242, 12, 37, .52));
+}
+
+body.creative-on .sebastian-image {
+    filter:
+        drop-shadow(0 18px 24px rgba(0, 0, 0, .28))
+        drop-shadow(0 0 12px rgba(242, 12, 37, .34));
+}
+
+body.creative-on .about-primary-button,
+body.creative-on .final-project-button {
+    box-shadow:
+        0 0 13px rgba(242, 12, 37, .48),
+        0 12px 24px rgba(0, 0, 0, .18);
+}
+
+
+/* DATOS RÁPIDOS NO CAMBIA DE POSICIÓN */
+
+body.creative-on .quick-title {
+    transform: translate3d(0, -92px, 0) !important;
+    filter:
+        drop-shadow(0 0 7px rgba(255, 255, 255, .32))
+        drop-shadow(0 0 13px rgba(242, 12, 37, .40));
+    animation: none !important;
+}
+
+
+/* MI CAMINO NO CAMBIA DE POSICIÓN */
+
+body.creative-on .journey-title {
+    transform: translate3d(0, -72px, 0) !important;
+    filter:
+        drop-shadow(0 0 7px rgba(255, 255, 255, .30))
+        drop-shadow(0 0 13px rgba(242, 12, 37, .40));
+    animation: none !important;
+}
+
+
+/* ANIMACIONES OPTIMIZADAS */
+
+body.creative-on .creative-about-title {
+    animation:
+        creativeHeroTitleFast
+        3.6s ease-in-out infinite;
+}
+
+body.creative-on .creative-banner-photo {
+    animation:
+        creativeSebastianFast
+        4.2s ease-in-out infinite;
+}
+
+body.creative-on .creative-history-resource {
+    animation:
+        creativeResourceFast
+        4.4s ease-in-out infinite;
+}
+
+body.creative-on .history-title,
+body.creative-on .skills-title,
+body.creative-on .tools-title,
+body.creative-on .more-title {
+    animation:
+        creativeTitleFast
+        4s ease-in-out infinite;
+}
+
+body.creative-on .creative-about-button {
+    animation:
+        creativeButtonFast
+        3s ease-in-out infinite;
+}
+
+body.creative-on .creative-quick-card:nth-child(odd),
+body.creative-on .creative-tool:nth-child(odd),
+body.creative-on .creative-more-card:nth-child(odd) {
+    animation:
+        creativeCardFastA
+        4.2s ease-in-out infinite;
+}
+
+body.creative-on .creative-quick-card:nth-child(even),
+body.creative-on .creative-tool:nth-child(even),
+body.creative-on .creative-more-card:nth-child(even) {
+    animation:
+        creativeCardFastB
+        4.6s ease-in-out infinite;
+}
+
+body.creative-on .creative-timeline-item:nth-child(odd) {
+    animation:
+        creativeTimelineFastA
+        4.3s ease-in-out infinite;
+}
+
+body.creative-on .creative-timeline-item:nth-child(even) {
+    animation:
+        creativeTimelineFastB
+        4.7s ease-in-out infinite;
+}
+
+body.creative-on .creative-final-banner {
+    animation:
+        creativeFinalFast
+        4.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes creativeHeroTitleFast {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+
+    50% {
+        transform: translate3d(0, -9px, 0) rotate(-1deg);
+    }
+}
+
+@keyframes creativeSebastianFast {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+
+    50% {
+        transform: translate3d(0, -13px, 0) rotate(1.2deg);
+    }
+}
+
+@keyframes creativeResourceFast {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes creativeTitleFast {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -7px, 0);
+    }
+}
+
+@keyframes creativeButtonFast {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, -6px, 0) scale(1.03);
+    }
+}
+
+@keyframes creativeCardFastA {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -8px, 0);
+    }
+}
+
+@keyframes creativeCardFastB {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes creativeTimelineFastA {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -8px, 0);
+    }
+}
+
+@keyframes creativeTimelineFastB {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes creativeFinalFast {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -5px, 0);
+    }
+}
+
+
+/* =========================================================
+   TABLET / RESPONSIVE
+   <= 800PX
+========================================================= */
+
+@media (max-width: 800px) {
+
+    body.about-page {
+        background: #080808;
+        overflow-x: hidden;
+    }
+
+    .about-main {
+        width: 100%;
+        padding: 14px 10px 0;
+        overflow: hidden;
+        background: #080808;
+    }
+
+
+    /* HEADER */
+
+    .about-page .site-header {
+        position: relative;
+        z-index: 2147483000 !important;
+    }
+
+    .about-page .header-inner {
+        position: relative;
+        z-index: 2147483001 !important;
+    }
+
+    .about-page .main-nav {
+        z-index: 2147483600 !important;
+    }
+
+    .about-page .mobile-menu-button {
+        position: relative !important;
+        z-index: 2147483646 !important;
+    }
+
+
+    /* =====================================================
+       HERO RESPONSIVE
+    ===================================================== */
+
+    .about-hero {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        margin: 0 auto 16px;
+        padding: 50px 30px 42px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #080808;
+    }
+
+    .about-hero-background {
+        display: none !important;
+    }
+
+    .about-hero-content {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: auto;
+    }
+
+    .about-hero-copy {
+        position: static;
+        width: 100%;
+        display: contents;
+    }
+
+    .about-title {
+        order: 1;
+        display: block;
+        width: min(520px, 84%);
+        height: auto;
+        margin: 0 auto 22px;
+        object-fit: contain;
+        transform: none !important;
+    }
+
+    .about-hero-text {
+        order: 2;
+        width: 100%;
+        max-width: 590px;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .about-hero-text h1 {
+        width: 100%;
+        margin: 0 auto 12px;
+        text-align: center;
+        font-size: clamp(1.2rem, 4vw, 1.65rem);
+        line-height: 1.2;
+    }
+
+    .about-hero-text p {
+        width: 100%;
+        max-width: 570px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: clamp(.82rem, 2.4vw, .96rem);
+        line-height: 1.55;
+    }
+
+    .about-sebastian {
+        position: static;
+        order: 3;
+        width: min(430px, 76vw);
+        margin: 0 auto 12px;
+        pointer-events: none;
+    }
+
+    .sebastian-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .about-button-wrapper {
+        order: 4;
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-primary-button {
+        min-width: min(285px, 80vw);
+        min-height: 60px;
+        padding: 15px 30px;
+    }
+
+
+    /* =====================================================
+       MI HISTORIA RESPONSIVE
+    ===================================================== */
+
+    .history-section {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        margin: 0 auto 16px;
+        padding: 48px 30px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #faf3e6;
+        color: #111;
+    }
+
+    .history-background {
+        display: none !important;
+    }
+
+    .history-content {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        transform: none;
+    }
+
+    .history-copy {
+        position: relative;
+        width: 100%;
+        max-width: 620px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: none;
+    }
+
+    .history-title {
+        display: block;
+        width: min(520px, 88%);
+        margin: 0 auto 23px;
+    }
+
+    .history-text {
+        width: 100%;
+        max-width: 590px;
+        margin: 0 auto;
+    }
+
+    .history-text p {
+        width: 100%;
+        text-align: center;
+        font-size: clamp(.82rem, 2.3vw, .95rem);
+        line-height: 1.55;
+    }
+
+    .history-resource-area,
+    .history-resource {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       DATOS RÁPIDOS RESPONSIVE
+    ===================================================== */
+
+    .quick-section {
+        position: relative;
+        width: 100%;
+        margin: 0 auto 16px;
+        padding: 46px 24px 40px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #080808;
+    }
+
+    .quick-title {
+        position: relative;
+        display: block;
+        width: min(570px, 88%);
+        margin: 0 auto 30px;
+        transform: none !important;
+    }
+
+    body.creative-on .quick-title {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .quick-grid {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        transform: none;
+    }
+
+    .quick-card,
+    .quick-card:nth-child(odd),
+    .quick-card:nth-child(even),
+    .quick-card:last-child {
+        min-height: 170px;
+        padding: 18px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, .13);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, .035);
+    }
+
+    .quick-icon {
+        width: 74px;
+        height: 74px;
+        margin: 0 auto 15px;
+    }
+
+
+    /* =====================================================
+       HABILIDADES RESPONSIVE
+    ===================================================== */
+
+    .skills-section {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        margin: 0 auto 16px;
+        padding: 50px 30px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #faf3e6;
+        color: #111;
+    }
+
+    .skills-background {
+        display: none !important;
+    }
+
+    .skills-grid {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 42px;
+        transform: none;
+    }
+
+    .skills-column {
+        width: 100%;
+        padding: 0 0 42px;
+        border-right: 0;
+        border-bottom: 2px solid rgba(20, 20, 20, .20);
+    }
+
+    .skills-title {
+        width: min(520px, 88%);
+        margin: 0 auto 25px;
+    }
+
+    .tools-column {
+        width: 100%;
+        padding: 0;
+    }
+
+    .tools-title {
+        width: min(500px, 86%);
+        margin: 0 auto 28px;
+    }
+
+    .tools-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .tool-card {
+        min-height: 145px;
+        border-radius: 18px;
+    }
+
+    .software-icon {
+        width: 72px;
+        height: 72px;
+    }
+
+
+    /* =====================================================
+       MI CAMINO — TABLET
+    ===================================================== */
+
+    .journey-section {
+        position: relative;
+        width: 100%;
+        margin: 0 auto 16px;
+        padding: 48px 28px 45px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #080808;
+        color: #fff;
+    }
+
+    .journey-title {
+        position: relative;
+        display: block;
+        width: min(570px, 88%);
+        margin: 0 auto 18px;
+        transform: none !important;
+    }
+
+    body.creative-on .journey-title {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .journey-description {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto 42px;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.5;
+    }
+
+    .timeline {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        padding: 0;
+    }
+
+    .timeline-line {
+        display: none !important;
+    }
+
+    .timeline-item {
+        position: relative;
+        min-height: 190px;
+        margin: 0;
+        padding: 26px 20px 22px;
+        border: 1px solid rgba(255, 255, 255, .16);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, .025);
+        overflow: hidden;
+    }
+
+    .timeline-dot {
+        position: relative;
+        display: block;
+        top: auto;
+        left: auto;
+        width: 13px;
+        height: 13px;
+        margin: 0 0 13px 2px;
+        border: 0;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow:
+            0 0 0 4px
+            rgba(255, 255, 255, .08);
+    }
+
+    .timeline-year {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 11px;
+        padding: 7px 12px;
+        border-radius: 7px;
+        background: var(--about-red-bright);
+        color: #fff;
+    }
+
+    .timeline-item strong {
+        display: block;
+        max-width: none;
+        margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+        max-width: none;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       MÁS QUE DISEÑO RESPONSIVE
+    ===================================================== */
+
+    .more-section {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        margin: 0 auto 16px;
+        padding: 48px 25px 42px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #faf3e6;
+        color: #111;
+    }
+
+    .more-background {
+        display: none !important;
+    }
+
+    .more-content {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: none;
+    }
+
+    .more-title {
+        width: min(530px, 86%);
+        margin: 0 auto 8px;
+    }
+
+    .more-description {
+        width: 100%;
+        max-width: 630px;
+        margin: 0 auto 28px;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.45;
+    }
+
+    .more-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .more-card {
+        min-height: 130px;
+        border-radius: 18px;
+    }
+
+
+    /* =====================================================
+       BANNER FINAL RESPONSIVE
+       BOTÓN A LA DERECHA DEL PERSONAJE
+    ===================================================== */
+
+    .about-final {
+        position: relative;
+        width: 100%;
+        margin: 0 auto 14px;
+        overflow: hidden;
+        border-radius: 42px;
+        background: #080808;
+    }
+
+    .about-final-picture {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .about-final-background {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        object-fit: contain;
+        object-position: center;
+        border-radius: inherit;
+    }
+
+    .about-final-content {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4% 0 0;
+        pointer-events: none;
+    }
+
+    .final-project-button {
+        position: relative;
+        z-index: 30;
+        width: auto;
+        min-width: 175px;
+        max-width: 220px;
+        min-height: 50px;
+        margin: 0;
+        padding: 12px 19px;
+        gap: 9px;
+        border-radius: 10px;
+        font-size: clamp(.67rem, 1.8vw, .78rem);
+        white-space: nowrap;
+        pointer-events: auto;
+    }
+
+    .final-project-button span {
+        font-size: .95rem;
+    }
+
+
+    /* CREATIVE RESPONSIVE */
+
+    body.creative-on .about-title {
+        transform: none !important;
+    }
+
+    body.creative-on .quick-title,
+    body.creative-on .journey-title {
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   <= 500PX
+========================================================= */
+
+@media (max-width: 500px) {
+
+    /* =====================================================
+       GENERAL
+    ===================================================== */
+
+    .about-main {
+        padding: 10px 7px 0;
+    }
+
+    .about-hero,
+    .history-section,
+    .quick-section,
+    .skills-section,
+    .journey-section,
+    .more-section,
+    .about-final {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 11px;
+        border-radius: 30px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .about-hero {
+        padding: 40px 19px 34px;
+    }
+
+    .about-title {
+        width: 91%;
+        margin-bottom: 18px;
+    }
+
+    .about-hero-text {
+        margin-bottom: 14px;
+    }
+
+    .about-hero-text h1 {
+        font-size: 1.18rem;
+    }
+
+    .about-hero-text p {
+        max-width: 390px;
+        font-size: .8rem;
+        line-height: 1.5;
+    }
+
+    .about-sebastian {
+        width: min(390px, 92vw);
+        margin: 0 auto 8px;
+    }
+
+    .about-primary-button {
+        width: min(285px, 84vw);
+        min-width: 0;
+        min-height: 57px;
+        font-size: .83rem;
+    }
+
+
+    /* =====================================================
+       MI HISTORIA
+    ===================================================== */
+
+    .history-section {
+        padding: 40px 19px 37px;
+    }
+
+    .history-title {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+
+    .history-text p {
+        font-size: .79rem;
+        line-height: 1.55;
+        margin-bottom: 15px;
+    }
+
+
+    /* =====================================================
+       DATOS RÁPIDOS
+    ===================================================== */
+
+    .quick-section {
+        padding: 40px 12px 34px;
+    }
+
+    .quick-title {
+        width: 96%;
+        margin-bottom: 25px;
+        transform: none !important;
+    }
+
+    body.creative-on .quick-title {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .quick-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .quick-card,
+    .quick-card:nth-child(odd),
+    .quick-card:nth-child(even),
+    .quick-card:last-child {
+        min-height: 148px;
+        padding: 14px 6px;
+        border-radius: 17px;
+    }
+
+    .quick-icon {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+    }
+
+    .quick-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .quick-card strong {
+        font-size: .67rem;
+    }
+
+    .quick-card small {
+        font-size: .58rem;
+    }
+
+
+    /* =====================================================
+       HABILIDADES
+    ===================================================== */
+
+    .skills-section {
+        padding: 41px 19px 38px;
+    }
+
+    .skills-title {
+        width: 98%;
+        margin-bottom: 21px;
+    }
+
+    .skill-list {
+        gap: 14px;
+    }
+
+    .skill-info {
+        font-size: .73rem;
+    }
+
+    .skill-track {
+        height: 17px;
+    }
+
+    .tools-title {
+        width: 95%;
+        margin-bottom: 23px;
+    }
+
+    .tools-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .tool-card {
+        min-height: 127px;
+        padding: 12px 7px;
+        border-radius: 16px;
+    }
+
+    .software-icon {
+        width: 66px;
+        height: 66px;
+        font-size: 1.35rem;
+    }
+
+
+    /* =====================================================
+       MI CAMINO — TIMELINE VERTICAL CORREGIDA
+    ===================================================== */
+
+    .journey-section {
+        position: relative;
+        padding: 40px 17px 42px;
+        overflow: hidden;
+    }
+
+    .journey-title {
+        width: 96%;
+        margin: 0 auto 15px;
+        transform: none !important;
+    }
+
+    body.creative-on .journey-title {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .journey-description {
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto 34px;
+        text-align: center;
+        font-size: .72rem;
+        line-height: 1.5;
+    }
+
+
+    /* TIMELINE CONTENEDOR */
+
+    .timeline {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0 0 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+
+    /* LÍNEA VERTICAL */
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        bottom: 20px;
+        left: 10px;
+        display: block;
+        width: 3px;
+        border-radius: 999px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, .18),
+                rgba(255, 255, 255, .95) 8%,
+                rgba(255, 255, 255, .95) 92%,
+                rgba(255, 255, 255, .18)
+            );
+    }
+
+    .timeline-line {
+        display: none !important;
+    }
+
+
+    /* TARJETAS */
+
+    .timeline-item {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 20px 17px 18px;
+        overflow: visible;
+        border: 1px solid rgba(255, 255, 255, .16);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, .025);
+        box-shadow: none;
+    }
+
+
+    /* PUNTOS DE LA TIMELINE */
+
+    .timeline-dot {
+        position: absolute;
+        z-index: 5;
+        top: 22px;
+        left: -31px;
+        display: block;
+        width: 17px;
+        height: 17px;
+        margin: 0;
+        border: 4px solid #080808;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow:
+            0 0 0 2px
+            rgba(255, 255, 255, .45);
+    }
+
+
+    /* AÑO */
+
+    .timeline-year {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 29px;
+        margin: 0 0 10px;
+        padding: 6px 12px;
+        border-radius: 7px;
+        background: var(--about-red-bright);
+        color: #fff;
+        font-size: .67rem;
+        font-weight: 900;
+    }
+
+    .timeline-item strong {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0 0 8px;
+        color: #fff;
+        font-size: .86rem;
+        line-height: 1.25;
+    }
+
+    .timeline-item p {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        color: rgba(255, 255, 255, .72);
+        font-size: .69rem;
+        line-height: 1.5;
+    }
+
+
+    /* EVITA QUE MODO CREATIVO ROMPA LA TIMELINE */
+
+    body.creative-on .timeline-item {
+        animation: none !important;
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       MÁS QUE DISEÑO
+    ===================================================== */
+
+    .more-section {
+        padding: 40px 14px 35px;
+    }
+
+    .more-title {
+        width: 96%;
+        margin-bottom: 7px;
+    }
+
+    .more-description {
+        max-width: 390px;
+        margin-bottom: 23px;
+        font-size: .76rem;
+    }
+
+    .more-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .more-card {
+        min-height: 120px;
+        border-radius: 16px;
+    }
+
+    .more-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 15px;
+        font-size: 1.35rem;
+    }
+
+
+    /* =====================================================
+       BANNER FINAL MÓVIL
+       BOTÓN PEQUEÑO A LA DERECHA DEL PERSONAJE
+    ===================================================== */
+
+    .about-final {
+        position: relative;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 30px;
+        background: #080808;
+    }
+
+    .about-final-picture {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .about-final-background {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    /* ZONA DERECHA */
+
+    .about-final-content {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+
+        width: 48%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 3% 0 0;
+
+        pointer-events: none;
+    }
+
+
+    /* BOTÓN */
+
+    .final-project-button {
+        position: relative;
+        z-index: 30;
+
+        width: auto;
+
+        min-width: 132px;
+        max-width: 155px;
+        min-height: 43px;
+
+        margin: 0;
+
+        padding: 10px 12px;
+
+        gap: 6px;
+
+        border-radius: 9px;
+
+        font-size: .58rem;
+        font-weight: 900;
+
+        white-space: nowrap;
+
+        box-shadow:
+            0 7px 18px
+            rgba(242, 12, 37, .24);
+
+        pointer-events: auto;
+    }
+
+    .final-project-button span {
+        font-size: .72rem;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   <= 380PX
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-main {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .about-hero,
+    .history-section,
+    .quick-section,
+    .skills-section,
+    .journey-section,
+    .more-section,
+    .about-final {
+        border-radius: 26px;
+    }
+
+
+    /* HERO */
+
+    .about-hero {
+        padding: 37px 15px 31px;
+    }
+
+    .about-title {
+        width: 94%;
+    }
+
+    .about-sebastian {
+        width: 95vw;
+    }
+
+
+    /* HISTORIA */
+
+    .history-section {
+        padding: 37px 16px 34px;
+    }
+
+
+    /* DATOS */
+
+    .quick-section {
+        padding: 37px 9px 31px;
+    }
+
+    .quick-card,
+    .quick-card:nth-child(odd),
+    .quick-card:nth-child(even) {
+        min-height: 140px;
+    }
+
+    .quick-icon {
+        width: 58px;
+        height: 58px;
+    }
+
+
+    /* HABILIDADES */
+
+    .skills-section {
+        padding: 38px 16px 35px;
+    }
+
+    .software-icon {
+        width: 61px;
+        height: 61px;
+    }
+
+
+    /* TIMELINE */
+
+    .journey-section {
+        padding: 37px 13px 38px;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        left: 9px;
+    }
+
+    .timeline-dot {
+        left: -27px;
+        width: 15px;
+        height: 15px;
+        border-width: 3px;
+    }
+
+    .timeline-item {
+        padding: 18px 14px 16px;
+    }
+
+    .timeline-item strong {
+        font-size: .82rem;
+    }
+
+    .timeline-item p {
+        font-size: .66rem;
+    }
+
+
+    /* MÁS QUE DISEÑO */
+
+    .more-section {
+        padding: 37px 10px 32px;
+    }
+
+
+    /* BANNER FINAL */
+
+    .about-final-content {
+        width: 47%;
+        padding-right: 2%;
+    }
+
+    .final-project-button {
+        min-width: 115px;
+        max-width: 135px;
+        min-height: 39px;
+        padding: 8px 9px;
+        gap: 4px;
+        border-radius: 8px;
+        font-size: .51rem;
+    }
+
+    .final-project-button span {
+        font-size: .62rem;
+    }
+}
+
+
+/* =========================================================
+   PAUSAR ANIMACIONES CUANDO LA PÁGINA NO ESTÁ VISIBLE
+========================================================= */
+
+body.animations-paused *,
+body.animations-paused *::before,
+body.animations-paused *::after {
+    animation-play-state: paused !important;
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-reveal,
+    .skill-progress,
+    .tool-card,
+    .quick-card,
+    .more-card,
+    .timeline-item,
+    .about-primary-button,
+    .final-project-button {
+        transition: none !important;
+    }
+
+    body.creative-on .creative-about-title,
+    body.creative-on .creative-banner-photo,
+    body.creative-on .creative-history-resource,
+    body.creative-on .creative-about-button,
+    body.creative-on .creative-quick-card,
+    body.creative-on .creative-tool,
+    body.creative-on .creative-timeline-item,
+    body.creative-on .creative-more-card,
+    body.creative-on .creative-final-banner,
+    .skill-progress::after {
+        animation: none !important;
+    }
+}
