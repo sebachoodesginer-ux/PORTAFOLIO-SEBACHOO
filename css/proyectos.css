@@ -1,0 +1,3434 @@
+/* =========================================================
+   PROYECTOS — SEBACHOO
+   CSS COMPLETO
+========================================================= */
+
+:root {
+    --projects-red: #f20c25;
+    --projects-red-dark: #c90b20;
+    --projects-black: #080808;
+    --projects-card: #0b0b0b;
+    --projects-beige: #faf3e6;
+    --projects-white: #ffffff;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.projects-page {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--projects-black);
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.projects-page *,
+.projects-page *::before,
+.projects-page *::after {
+    box-sizing: border-box;
+}
+
+.projects-main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--projects-black);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.projects-page .site-header {
+    position: relative;
+    z-index: 100000;
+}
+
+.projects-page .header-inner {
+    position: relative;
+    z-index: 100001;
+}
+
+.projects-page .main-nav {
+    z-index: 100002;
+}
+
+.projects-page .mobile-menu-button {
+    z-index: 100003;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.projects-reveal {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+.projects-reveal.projects-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.projects-hero {
+    position: relative;
+    z-index: 30;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+.projects-hero-image {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+.projects-hero-title-wrap {
+    position: absolute;
+    z-index: 10;
+
+    left: 4.5%;
+    top: 17%;
+
+    width: 52%;
+    height: 59%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.projects-hero-title {
+    display: block;
+
+    width: 97%;
+    max-width: 950px;
+    height: auto;
+
+    object-fit: contain;
+
+    filter: none;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.projects-gallery-section {
+    position: relative;
+    z-index: 20;
+
+    width: 100%;
+
+    margin:
+        -58px
+        0
+        -68px;
+
+    padding:
+        clamp(78px, 5.2vw, 104px)
+        3.5%
+        clamp(118px, 6.8vw, 150px);
+
+    overflow: hidden;
+
+    color: #111;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff9ed 0%,
+            #faf3e6 48%,
+            #f8efdf 100%
+        );
+
+    clip-path:
+        polygon(
+            0 2%,
+            7% 1.2%,
+            16% 1.8%,
+            26% .8%,
+            38% 1.5%,
+            49% .7%,
+            61% 1.6%,
+            72% .8%,
+            84% 1.6%,
+            93% .8%,
+            100% 1.7%,
+
+            100% 97%,
+            92% 98.4%,
+            82% 97.7%,
+            71% 99%,
+            60% 97.9%,
+            49% 99%,
+            37% 97.8%,
+            25% 99%,
+            14% 97.8%,
+            6% 99%,
+            0 98%
+        );
+}
+
+.projects-gallery-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .035;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #111 0 1px,
+            transparent 1.3px
+        );
+
+    background-size: 20px 20px;
+}
+
+.projects-gallery-inner {
+    position: relative;
+    z-index: 5;
+
+    width: min(94%, 1820px);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ZONA DE FILTROS
+========================================================= */
+
+.filter-zone {
+    position: relative;
+
+    width: 100%;
+
+    margin:
+        0 auto
+        clamp(24px, 1.8vw, 34px);
+
+    padding:
+        30px
+        34px
+        33px;
+
+    border: 2px solid #111;
+    border-radius: 28px;
+
+    background: rgba(255, 250, 240, .98);
+
+    box-shadow:
+        8px
+        9px
+        0
+        rgba(17, 17, 17, .11);
+}
+
+
+/* =========================================================
+   CABECERA DE FILTROS
+========================================================= */
+
+.filter-zone-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.filter-zone-icon {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--projects-red);
+
+    color: #fff;
+}
+
+.filter-zone-icon span {
+    font-size: 1.8rem;
+}
+
+.filter-zone-copy {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.filter-zone-eyebrow {
+    color: var(--projects-red);
+
+    font-size: .68rem;
+    font-weight: 900;
+
+    letter-spacing: .12em;
+}
+
+.filter-zone-copy strong {
+    color: #111;
+
+    font-size:
+        clamp(
+            1.15rem,
+            1.35vw,
+            1.55rem
+        );
+
+    font-weight: 900;
+}
+
+.filter-zone-line {
+    flex: 1;
+
+    height: 2px;
+
+    opacity: .25;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #111 0,
+            #111 9px,
+            transparent 9px,
+            transparent 17px
+        );
+}
+
+.filter-zone-number {
+    padding:
+        10px
+        16px;
+
+    border-radius: 999px;
+
+    background: #111;
+    color: #fff;
+
+    font-size: .65rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   SELECTOR RESPONSIVE
+========================================================= */
+
+.mobile-filter-toggle {
+    display: none;
+}
+
+
+/* =========================================================
+   FILTROS ESCRITORIO
+========================================================= */
+
+.project-filters {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            9,
+            minmax(0, 1fr)
+        );
+
+    gap: 11px;
+}
+
+.project-filter {
+    position: relative;
+
+    min-width: 0;
+    min-height: 76px;
+
+    padding:
+        13px
+        10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1.6px solid #222;
+    border-radius: 14px;
+
+    background: transparent;
+
+    color: #111;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size:
+        clamp(
+            .68rem,
+            .76vw,
+            .88rem
+        );
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        transform .16s ease,
+        background-color .16s ease,
+        color .16s ease,
+        border-color .16s ease;
+}
+
+.filter-index {
+    flex-shrink: 0;
+
+    color: var(--projects-red);
+
+    font-size: .55rem;
+    font-weight: 900;
+}
+
+.filter-name {
+    white-space: nowrap;
+
+    font-size: inherit;
+    font-weight: 900;
+}
+
+.project-filter:hover {
+    transform: translate3d(0, -3px, 0);
+
+    background: #111;
+    color: #fff;
+}
+
+.project-filter.active {
+    background: var(--projects-red);
+
+    border-color: var(--projects-red);
+
+    color: #fff;
+
+    transform: translate3d(0, -3px, 0);
+}
+
+.project-filter.active .filter-index {
+    color: #fff;
+}
+
+
+/* =========================================================
+   GRID DE PROYECTOS
+========================================================= */
+
+.projects-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        clamp(34px, 2.5vw, 48px)
+        clamp(25px, 2vw, 38px);
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.project-card {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(17, 17, 17, .14);
+
+    border-radius: 24px;
+
+    background: #090909;
+
+    box-shadow:
+        0 10px 0
+        rgba(17, 17, 17, .08),
+
+        0 18px 34px
+        rgba(0, 0, 0, .10);
+
+    transform: translateZ(0);
+
+    backface-visibility: hidden;
+
+    transition:
+        transform .20s ease,
+        box-shadow .20s ease;
+}
+
+.project-card.project-hidden {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translate3d(0, -6px, 0);
+
+    box-shadow:
+        0 12px 0
+        rgba(17, 17, 17, .08),
+
+        0 22px 38px
+        rgba(0, 0, 0, .12);
+}
+
+.project-card-link {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   IMAGEN TARJETA
+========================================================= */
+
+.project-image-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1.18 / 1;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.project-image-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 34%;
+
+    pointer-events: none;
+
+    opacity: .65;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(0, 0, 0, .20)
+        );
+}
+
+.project-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: translateZ(0);
+
+    transition: transform .28s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   NÚMERO DE TARJETA
+========================================================= */
+
+.project-number {
+    position: absolute;
+    z-index: 4;
+
+    top: 14px;
+    right: 14px;
+
+    min-width: 44px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .5);
+
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, .77);
+
+    color: #fff;
+
+    font-size: .61rem;
+    font-weight: 900;
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   INFORMACIÓN TARJETA
+========================================================= */
+
+.project-card-info {
+    position: relative;
+
+    flex: 1;
+
+    min-height: 124px;
+
+    padding:
+        22px
+        80px
+        22px
+        23px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .08);
+
+    background: #0b0b0b;
+
+    color: #fff;
+}
+
+.project-card-info::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 23px;
+
+    width: 55px;
+    height: 3px;
+
+    background: var(--projects-red);
+}
+
+.project-card-info::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255, 255, 255, .035),
+            transparent 42%
+        );
+}
+
+.project-card-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.project-card-copy h2 {
+    margin:
+        0 0 7px;
+
+    color: #fff;
+
+    font-size:
+        clamp(
+            .95rem,
+            1.1vw,
+            1.28rem
+        );
+
+    font-weight: 900;
+
+    line-height: 1.1;
+}
+
+.project-card-copy p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, .69);
+
+    font-size:
+        clamp(
+            .61rem,
+            .68vw,
+            .78rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FLECHA DE TARJETA
+========================================================= */
+
+.project-arrow {
+    position: absolute;
+    z-index: 5;
+
+    top: 50%;
+    right: 19px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff;
+    color: #111;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    transform: translateY(-50%);
+
+    transition:
+        transform .16s ease,
+        background-color .16s ease,
+        color .16s ease;
+}
+
+.project-card:hover .project-arrow {
+    background: var(--projects-red);
+
+    color: #fff;
+
+    transform:
+        translate(
+            4px,
+            -50%
+        );
+}
+
+
+/* =========================================================
+   BANNER FINAL — ESCRITORIO
+========================================================= */
+
+.projects-final {
+    position: relative;
+    z-index: 30;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+.projects-final-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.projects-final-content {
+    position: absolute;
+    z-index: 10;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    padding:
+        0
+        5.2%
+        0
+        47%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTÓN PORTAFOLIO — ESCRITORIO
+========================================================= */
+
+.projects-show-all {
+    width: min(100%, 700px);
+
+    min-height: 116px;
+
+    padding:
+        22px
+        30px
+        22px
+        42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 28px;
+
+    border-radius: 23px;
+
+    background: var(--projects-red);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    pointer-events: auto;
+
+    box-shadow:
+        0 9px 0
+        #a4081a,
+
+        0 20px 30px
+        rgba(242, 12, 37, .17);
+
+    transform: translateZ(0);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+}
+
+.projects-show-all:hover {
+    transform: translate3d(0, -5px, 0);
+
+    box-shadow:
+        0 11px 0
+        #a4081a,
+
+        0 24px 34px
+        rgba(242, 12, 37, .20);
+}
+
+.show-all-copy {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.show-all-copy small {
+    color: rgba(255, 255, 255, .72);
+
+    font-size: .64rem;
+    font-weight: 800;
+
+    letter-spacing: .12em;
+}
+
+.show-all-copy strong {
+    color: #fff;
+
+    font-size:
+        clamp(
+            1.18rem,
+            1.55vw,
+            1.72rem
+        );
+
+    font-weight: 900;
+}
+
+.show-all-arrow {
+    width: 66px;
+    height: 66px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: var(--projects-red);
+
+    font-size: 1.85rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   FOOTER — ICONOS
+========================================================= */
+
+.projects-social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.projects-social-icons a {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .22);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition:
+        transform .18s ease,
+        border-color .18s ease,
+        background-color .18s ease;
+}
+
+.projects-social-icons a:hover {
+    transform: translate3d(0, -3px, 0);
+
+    border-color: var(--projects-red);
+
+    background: rgba(242, 12, 37, .12);
+}
+
+.projects-social-icons svg {
+    width: 19px;
+    height: 19px;
+
+    fill: currentColor;
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+}
+
+.projects-social-icons svg path {
+    stroke: none;
+}
+
+
+/* =========================================================
+   MODO CREATIVO — TÍTULO
+========================================================= */
+
+body.creative-on .projects-hero-title {
+    animation:
+        projectsTitleCreative
+        2.1s
+        ease-in-out
+        infinite;
+
+    will-change:
+        transform,
+        filter;
+}
+
+@keyframes projectsTitleCreative {
+
+    0%,
+    100% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+
+        filter:
+            drop-shadow(
+                0 0 3px
+                rgba(242, 12, 37, .20)
+            )
+            drop-shadow(
+                0 0 9px
+                rgba(242, 12, 37, .13)
+            );
+    }
+
+    50% {
+        transform:
+            translate3d(
+                0,
+                -2px,
+                0
+            );
+
+        filter:
+            drop-shadow(
+                0 0 4px
+                rgba(242, 12, 37, .34)
+            )
+            drop-shadow(
+                0 0 12px
+                rgba(242, 12, 37, .20)
+            );
+    }
+}
+
+
+/* =========================================================
+   MODO CREATIVO — FILTRO
+========================================================= */
+
+body.creative-on .project-filter.active {
+    animation:
+        creativeFilter
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+@keyframes creativeFilter {
+
+    0%,
+    100% {
+        transform:
+            translate3d(
+                0,
+                -3px,
+                0
+            );
+    }
+
+    50% {
+        transform:
+            translate3d(
+                0,
+                -5px,
+                0
+            );
+    }
+}
+
+
+/* =========================================================
+   MODO CREATIVO — CTA
+========================================================= */
+
+body.creative-on .projects-show-all {
+    animation:
+        creativePortfolioButton
+        2.2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes creativePortfolioButton {
+
+    0%,
+    100% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+    }
+
+    50% {
+        transform:
+            translate3d(
+                0,
+                -4px,
+                0
+            );
+    }
+}
+
+
+/* =========================================================
+   MODO CREATIVO — TARJETAS
+========================================================= */
+
+body.creative-on
+.project-card:nth-child(3n + 1) {
+    animation:
+        creativeCardA
+        3.8s
+        ease-in-out
+        infinite;
+}
+
+body.creative-on
+.project-card:nth-child(3n + 2) {
+    animation:
+        creativeCardB
+        4.2s
+        ease-in-out
+        infinite;
+}
+
+body.creative-on
+.project-card:nth-child(3n) {
+    animation:
+        creativeCardC
+        4.6s
+        ease-in-out
+        infinite;
+}
+
+@keyframes creativeCardA {
+
+    0%,
+    100% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+    }
+
+    50% {
+        transform:
+            translate3d(
+                0,
+                -4px,
+                0
+            );
+    }
+}
+
+@keyframes creativeCardB {
+
+    0%,
+    100% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+    }
+
+    50% {
+        transform:
+            translate3d(
+                0,
+                -3px,
+                0
+            );
+    }
+}
+
+@keyframes creativeCardC {
+
+    0%,
+    100% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+    }
+
+    50% {
+        transform:
+            translate3d(
+                0,
+                -5px,
+                0
+            );
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1350px) and (min-width: 801px) {
+
+    .project-filters {
+        grid-template-columns:
+            repeat(
+                5,
+                minmax(0, 1fr)
+            );
+    }
+
+    .project-filter {
+        font-size:
+            clamp(
+                .72rem,
+                1vw,
+                .86rem
+            );
+    }
+
+}
+
+
+@media (max-width: 1150px) and (min-width: 801px) {
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+    .projects-final-content {
+        padding:
+            0
+            5%
+            0
+            42%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 800PX
+========================================================= */
+
+@media (max-width: 800px) {
+
+
+    /* =====================================================
+       HEADER
+    ====================================================== */
+
+    .projects-page .site-header {
+        position: relative;
+
+        z-index:
+            2147483000 !important;
+    }
+
+    .projects-page .header-inner {
+        position: relative;
+
+        z-index:
+            2147483001 !important;
+    }
+
+    .projects-page .main-nav {
+        z-index:
+            2147483600 !important;
+    }
+
+    .projects-page .mobile-menu-button {
+        position:
+            relative !important;
+
+        z-index:
+            2147483646 !important;
+    }
+
+
+    /* =====================================================
+       HERO ROJO
+    ====================================================== */
+
+    .projects-hero {
+        position: relative;
+
+        z-index: 100;
+
+        width: 100%;
+        min-height: 255px;
+
+        margin:
+            0 0 -40px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        overflow: visible;
+
+        background:
+            var(--projects-red);
+
+        clip-path:
+            polygon(
+                0 0,
+                100% 0,
+
+                100% 87%,
+                93% 89%,
+                85% 87%,
+                77% 90%,
+                69% 87%,
+                61% 91%,
+                52% 88%,
+                44% 92%,
+                35% 88%,
+                27% 91%,
+                18% 88%,
+                9% 91%,
+                0 89%
+            );
+    }
+
+    .projects-hero::before,
+    .projects-hero::after {
+        content: none !important;
+
+        display: none !important;
+    }
+
+    .projects-hero-image {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       TÍTULO HERO
+    ====================================================== */
+
+    .projects-hero-title-wrap {
+        position: relative;
+
+        z-index: 110;
+
+        left: auto;
+        top: auto;
+
+        width:
+            min(
+                88%,
+                560px
+            );
+
+        height: auto;
+
+        margin:
+            0 0 28px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects-hero-title {
+        position: relative;
+
+        z-index: 111;
+
+        width: 100%;
+        height: auto;
+
+        filter:
+            brightness(0)
+            invert(1);
+    }
+
+
+    /* =====================================================
+       GALERÍA
+    ====================================================== */
+
+    .projects-gallery-section {
+        position: relative;
+
+        z-index: 20;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding:
+            72px
+            18px
+            52px;
+
+        overflow: hidden;
+
+        background:
+            linear-gradient(
+                180deg,
+                #fff9ed 0%,
+                #faf3e6 50%,
+                #f8efdf 100%
+            );
+
+        clip-path: none;
+    }
+
+    .projects-gallery-section::before {
+        opacity: .03;
+
+        background-size:
+            22px 22px;
+    }
+
+    .projects-gallery-inner {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       ZONA FILTRO
+    ====================================================== */
+
+    .filter-zone {
+        width: 100%;
+
+        margin:
+            0 auto
+            24px;
+
+        padding: 0;
+
+        border: 0;
+        border-radius: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+    }
+
+
+    /* =====================================================
+       CABECERA FILTRO
+    ====================================================== */
+
+    .filter-zone-header {
+        width: 100%;
+
+        margin-bottom: 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        text-align: center;
+    }
+
+    .filter-zone-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 5px;
+
+        border-radius: 50%;
+    }
+
+    .filter-zone-icon span {
+        font-size: 1.35rem;
+    }
+
+    .filter-zone-copy {
+        width: 100%;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    .filter-zone-eyebrow {
+        font-size: .58rem;
+
+        text-align: center;
+    }
+
+    .filter-zone-copy strong {
+        width: 100%;
+
+        color: #111;
+
+        font-size:
+            clamp(
+                1.6rem,
+                6vw,
+                2.25rem
+            );
+
+        font-weight: 900;
+
+        line-height: 1;
+
+        text-align: center;
+    }
+
+    .filter-zone-line {
+        display: none;
+    }
+
+    .filter-zone-number {
+        margin-top: 8px;
+
+        padding:
+            7px
+            13px;
+
+        font-size: .5rem;
+    }
+
+
+    /* =====================================================
+       BOTÓN FILTRO DESPLEGABLE
+    ====================================================== */
+
+    .mobile-filter-toggle {
+        position: relative;
+
+        width: 100%;
+        min-height: 76px;
+
+        padding:
+            11px
+            14px
+            11px
+            17px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+
+        border: 2px solid #111;
+        border-radius: 16px;
+
+        background: #111;
+        color: #fff;
+
+        font-family: "Montserrat", sans-serif;
+
+        cursor: pointer;
+
+        box-shadow:
+            5px
+            6px
+            0
+            rgba(242, 12, 37, .18);
+
+        transition: transform .18s ease;
+    }
+
+    .mobile-filter-selected {
+        min-width: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 11px;
+    }
+
+    .mobile-filter-number {
+        color: var(--projects-red);
+
+        font-size: .65rem;
+        font-weight: 900;
+    }
+
+    .mobile-filter-current {
+        color: #fff;
+
+        font-size:
+            clamp(
+                .9rem,
+                3.7vw,
+                1.08rem
+            );
+
+        font-weight: 900;
+
+        white-space: nowrap;
+    }
+
+    .mobile-filter-action {
+        flex-shrink: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+    }
+
+    .mobile-filter-label {
+        color: rgba(255, 255, 255, .62);
+
+        font-size: .5rem;
+        font-weight: 900;
+
+        letter-spacing: .1em;
+    }
+
+    .mobile-filter-arrow {
+        width: 36px;
+        height: 36px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: var(--projects-red);
+
+        color: #fff;
+
+        font-size: 1rem;
+
+        transition: transform .18s ease;
+    }
+
+    .mobile-filter-toggle.open
+    .mobile-filter-arrow {
+        transform: rotate(180deg);
+    }
+
+
+    /* =====================================================
+       LISTA DESPLEGABLE
+    ====================================================== */
+
+    .project-filters {
+        width: 100%;
+
+        max-height:
+            min(
+                58vh,
+                520px
+            );
+
+        margin-top: 10px;
+
+        padding: 8px;
+
+        display: none;
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        overflow-y: auto;
+
+        overscroll-behavior: contain;
+
+        border: 2px solid #111;
+        border-radius: 16px;
+
+        background:
+            rgba(
+                255,
+                250,
+                240,
+                .98
+            );
+
+        box-shadow:
+            5px
+            6px
+            0
+            rgba(17, 17, 17, .10);
+
+        transform-origin: top;
+    }
+
+    .project-filters.mobile-open {
+        display: grid;
+
+        animation:
+            mobileFilterOpen
+            .20s
+            ease-out
+            both;
+    }
+
+    @keyframes mobileFilterOpen {
+
+        from {
+            opacity: 0;
+
+            transform:
+                translate3d(
+                    0,
+                    -6px,
+                    0
+                )
+                scaleY(.98);
+        }
+
+        to {
+            opacity: 1;
+
+            transform:
+                translate3d(
+                    0,
+                    0,
+                    0
+                )
+                scaleY(1);
+        }
+    }
+
+
+    /* =====================================================
+       OPCIONES FILTRO
+    ====================================================== */
+
+    .project-filter {
+        width: 100%;
+
+        min-height: 56px;
+
+        padding:
+            12px
+            15px;
+
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        border:
+            1px solid
+            rgba(17, 17, 17, .20);
+
+        border-radius: 11px;
+
+        font-size: .82rem;
+
+        text-align: left;
+
+        transform: none;
+    }
+
+    .project-filter:hover {
+        transform: none;
+    }
+
+    .project-filter.active {
+        transform: none;
+
+        background: var(--projects-red);
+
+        border-color: var(--projects-red);
+
+        color: #fff;
+    }
+
+    .filter-index {
+        min-width: 24px;
+
+        font-size: .57rem;
+    }
+
+    .filter-name {
+        font-size: .82rem;
+        font-weight: 900;
+    }
+
+
+    /* =====================================================
+       GRID RESPONSIVE
+    ====================================================== */
+
+    .projects-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* =====================================================
+       TARJETAS RESPONSIVE
+    ====================================================== */
+
+    .project-card {
+        width: 100%;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 8px 0
+            rgba(17, 17, 17, .07),
+
+            0 15px 26px
+            rgba(0, 0, 0, .10);
+    }
+
+    .project-image-wrapper {
+        aspect-ratio: 1.28 / 1;
+    }
+
+    .project-card-info {
+        min-height: 106px;
+
+        padding:
+            18px
+            70px
+            18px
+            19px;
+    }
+
+    .project-card-info::before {
+        left: 19px;
+
+        width: 48px;
+    }
+
+    .project-card-copy h2 {
+        font-size:
+            clamp(
+                1rem,
+                4.4vw,
+                1.25rem
+            );
+    }
+
+    .project-card-copy p {
+        font-size:
+            clamp(
+                .62rem,
+                2.7vw,
+                .76rem
+            );
+    }
+
+    .project-arrow {
+        right: 16px;
+
+        width: 43px;
+        height: 43px;
+
+        font-size: 1.35rem;
+    }
+
+    .project-number {
+        top: 12px;
+        right: 12px;
+
+        min-width: 41px;
+        height: 30px;
+    }
+
+
+    /* =====================================================
+       FINAL RESPONSIVE
+       SIN BANNER / CON RECUADRO NEGRO
+    ====================================================== */
+
+    .projects-final {
+        position: relative;
+
+        z-index: 30;
+
+        width: 100%;
+        min-height: 280px;
+
+        margin: 0;
+
+        padding:
+            30px
+            16px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        background: #080808;
+
+        clip-path: none;
+    }
+
+
+    /* -----------------------------------------------------
+       OCULTAMOS EL BANNER SOLO EN RESPONSIVE
+    ----------------------------------------------------- */
+
+    .projects-final-image {
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       RECUADRO NEGRO
+    ----------------------------------------------------- */
+
+    .projects-final::before {
+        content: "";
+
+        position: absolute;
+        z-index: 1;
+
+        top: 24px;
+        right: 16px;
+        bottom: 24px;
+        left: 16px;
+
+        border:
+            1px solid
+            rgba(255, 255, 255, .12);
+
+        border-radius: 26px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #141414 0%,
+                #080808 55%,
+                #050505 100%
+            );
+
+        box-shadow:
+            0 16px 32px
+            rgba(0, 0, 0, .30);
+
+        pointer-events: none;
+    }
+
+
+    /* -----------------------------------------------------
+       DETALLE ROJO SUPERIOR
+    ----------------------------------------------------- */
+
+    .projects-final::after {
+        content: "";
+
+        position: absolute;
+        z-index: 2;
+
+        top: 24px;
+        left: 42px;
+
+        width: 72px;
+        height: 4px;
+
+        border-radius: 999px;
+
+        background: var(--projects-red);
+
+        pointer-events: none;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENIDO SOBRE EL RECUADRO
+    ----------------------------------------------------- */
+
+    .projects-final-content {
+        position: relative;
+        z-index: 10;
+
+        inset: auto;
+
+        width: 100%;
+
+        padding:
+            40px
+            20px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        pointer-events: none;
+    }
+
+
+    /* =====================================================
+       BOTÓN VER PORTAFOLIO RESPONSIVE
+    ====================================================== */
+
+    .projects-show-all {
+        position: relative;
+        z-index: 11;
+
+        width:
+            min(
+                94%,
+                500px
+            );
+
+        min-height: 104px;
+
+        margin: 0;
+
+        padding:
+            18px
+            19px
+            18px
+            27px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 17px;
+
+        border:
+            1px solid
+            rgba(255, 255, 255, .16);
+
+        border-radius: 19px;
+
+        background: var(--projects-red);
+
+        color: #fff;
+
+        box-shadow:
+            0 8px 0
+            #a4081a,
+
+            0 17px 27px
+            rgba(242, 12, 37, .18);
+
+        pointer-events: auto;
+    }
+
+    .show-all-copy {
+        min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .show-all-copy small {
+        font-size: .53rem;
+
+        line-height: 1.2;
+
+        letter-spacing: .1em;
+    }
+
+    .show-all-copy strong {
+        font-size:
+            clamp(
+                1.05rem,
+                4.4vw,
+                1.35rem
+            );
+
+        line-height: 1.05;
+    }
+
+    .show-all-arrow {
+        width: 55px;
+        height: 55px;
+
+        flex-shrink: 0;
+
+        font-size: 1.55rem;
+    }
+
+
+    /* =====================================================
+       FOOTER RESPONSIVE
+    ====================================================== */
+
+    .projects-social-icons {
+        gap: 10px;
+    }
+
+    .projects-social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .projects-social-icons svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* =====================================================
+       MODO CREATIVO RESPONSIVE — TÍTULO
+    ====================================================== */
+
+    body.creative-on
+    .projects-hero-title {
+        animation:
+            projectsTitleCreativeMobile
+            2.1s
+            ease-in-out
+            infinite;
+    }
+
+    @keyframes projectsTitleCreativeMobile {
+
+        0%,
+        100% {
+            transform:
+                translate3d(
+                    0,
+                    0,
+                    0
+                );
+
+            filter:
+                brightness(0)
+                invert(1)
+
+                drop-shadow(
+                    0 0 3px
+                    rgba(255, 255, 255, .18)
+                )
+
+                drop-shadow(
+                    0 0 7px
+                    rgba(255, 255, 255, .10)
+                );
+        }
+
+        50% {
+            transform:
+                translate3d(
+                    0,
+                    -2px,
+                    0
+                );
+
+            filter:
+                brightness(0)
+                invert(1)
+
+                drop-shadow(
+                    0 0 4px
+                    rgba(255, 255, 255, .30)
+                )
+
+                drop-shadow(
+                    0 0 10px
+                    rgba(255, 255, 255, .16)
+                );
+        }
+    }
+
+
+    /* =====================================================
+       TARJETAS CREATIVAS RESPONSIVE
+    ====================================================== */
+
+    body.creative-on
+    .project-card:nth-child(odd) {
+        animation:
+            mobileCardOdd
+            3.6s
+            ease-in-out
+            infinite;
+    }
+
+    body.creative-on
+    .project-card:nth-child(even) {
+        animation:
+            mobileCardEven
+            4s
+            ease-in-out
+            infinite;
+    }
+
+    @keyframes mobileCardOdd {
+
+        0%,
+        100% {
+            transform:
+                translate3d(
+                    0,
+                    0,
+                    0
+                );
+        }
+
+        50% {
+            transform:
+                translate3d(
+                    0,
+                    -4px,
+                    0
+                );
+        }
+    }
+
+    @keyframes mobileCardEven {
+
+        0%,
+        100% {
+            transform:
+                translate3d(
+                    0,
+                    0,
+                    0
+                );
+        }
+
+        50% {
+            transform:
+                translate3d(
+                    0,
+                    -3px,
+                    0
+                );
+        }
+    }
+
+
+    /* =====================================================
+       SELECTOR CREATIVO
+    ====================================================== */
+
+    body.creative-on
+    .mobile-filter-toggle {
+        animation:
+            mobileFilterPulse
+            2.8s
+            ease-in-out
+            infinite;
+    }
+
+    @keyframes mobileFilterPulse {
+
+        0%,
+        100% {
+            transform:
+                translate3d(
+                    0,
+                    0,
+                    0
+                );
+        }
+
+        50% {
+            transform:
+                translate3d(
+                    0,
+                    -2px,
+                    0
+                );
+        }
+    }
+
+
+    /* =====================================================
+       BOTÓN FINAL CREATIVO RESPONSIVE
+    ====================================================== */
+
+    body.creative-on
+    .projects-show-all {
+        animation:
+            mobilePortfolioButton
+            2.4s
+            ease-in-out
+            infinite;
+    }
+
+    @keyframes mobilePortfolioButton {
+
+        0%,
+        100% {
+            transform:
+                translate3d(
+                    0,
+                    0,
+                    0
+                );
+        }
+
+        50% {
+            transform:
+                translate3d(
+                    0,
+                    -3px,
+                    0
+                );
+        }
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .projects-hero {
+        min-height: 230px;
+
+        margin-bottom: -36px;
+    }
+
+    .projects-hero-title-wrap {
+        width: 90%;
+
+        margin-bottom: 24px;
+    }
+
+
+    /* =====================================================
+       GALERÍA
+    ====================================================== */
+
+    .projects-gallery-section {
+        padding:
+            66px
+            14px
+            44px;
+    }
+
+
+    /* =====================================================
+       FILTROS
+    ====================================================== */
+
+    .filter-zone {
+        margin-bottom: 21px;
+    }
+
+    .filter-zone-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .filter-zone-copy strong {
+        font-size:
+            clamp(
+                1.45rem,
+                7vw,
+                1.9rem
+            );
+    }
+
+    .mobile-filter-toggle {
+        min-height: 70px;
+
+        padding:
+            10px
+            11px
+            10px
+            14px;
+    }
+
+    .mobile-filter-current {
+        font-size: .9rem;
+    }
+
+    .mobile-filter-label {
+        display: none;
+    }
+
+    .project-filter {
+        min-height: 54px;
+
+        font-size: .8rem;
+    }
+
+    .filter-name {
+        font-size: .8rem;
+    }
+
+
+    /* =====================================================
+       PROYECTOS
+    ====================================================== */
+
+    .projects-grid {
+        gap: 27px;
+    }
+
+    .project-card-info {
+        min-height: 100px;
+    }
+
+
+    /* =====================================================
+       FINAL NEGRO — MÓVILES PEQUEÑOS
+    ====================================================== */
+
+    .projects-final {
+        min-height: 250px;
+
+        padding:
+            24px
+            10px;
+    }
+
+    .projects-final-image {
+        display: none !important;
+    }
+
+    .projects-final::before {
+        top: 18px;
+        right: 10px;
+        bottom: 18px;
+        left: 10px;
+
+        border-radius: 22px;
+    }
+
+    .projects-final::after {
+        top: 18px;
+        left: 34px;
+
+        width: 60px;
+        height: 4px;
+    }
+
+    .projects-final-content {
+        padding:
+            30px
+            10px;
+    }
+
+    .projects-show-all {
+        width: 96%;
+
+        min-height: 96px;
+
+        padding:
+            16px
+            15px
+            16px
+            21px;
+
+        border-radius: 17px;
+    }
+
+    .show-all-copy small {
+        font-size: .48rem;
+    }
+
+    .show-all-copy strong {
+        font-size:
+            clamp(
+                .95rem,
+                4.5vw,
+                1.18rem
+            );
+    }
+
+    .show-all-arrow {
+        width: 50px;
+        height: 50px;
+
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/* =========================================================
+   PAUSAR ANIMACIONES CUANDO LA PÁGINA NO ESTÁ VISIBLE
+========================================================= */
+
+.animations-paused *,
+.animations-paused *::before,
+.animations-paused *::after {
+    animation-play-state: paused !important;
+}
+
+
+/* =========================================================
+   REDUCIR MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .projects-reveal {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+    .project-card,
+    .project-image,
+    .project-arrow,
+    .project-filter,
+    .projects-show-all,
+    .mobile-filter-toggle {
+        transition: none;
+    }
+
+    body.creative-on
+    .projects-hero-title,
+
+    body.creative-on
+    .project-filter.active,
+
+    body.creative-on
+    .projects-show-all,
+
+    body.creative-on
+    .project-card,
+
+    body.creative-on
+    .mobile-filter-toggle,
+
+    .project-filters.mobile-open {
+        animation: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
+
+.project-filter:focus-visible,
+.mobile-filter-toggle:focus-visible,
+.projects-show-all:focus-visible,
+.project-card-link:focus-visible,
+.projects-social-icons a:focus-visible {
+    outline:
+        3px solid
+        var(--projects-red);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   OPTIMIZACIÓN
+========================================================= */
+
+.project-card,
+.projects-show-all,
+.mobile-filter-toggle {
+    backface-visibility: hidden;
+}
+
+.project-image {
+    backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   FIN
+========================================================= */
+/* =========================================================
+   FOOTER PROYECTOS
+   AJUSTE FINAL
+   ========================================================= */
+
+
+/* =========================================================
+   ESTRUCTURA GENERAL
+   ========================================================= */
+
+.projects-page .projects-footer {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.projects-page .projects-footer .footer-inner {
+    position: relative;
+    z-index: 10;
+
+    width: min(92%, 1720px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1fr)
+        auto
+        minmax(360px, 1fr);
+
+    align-items: center;
+
+    gap: clamp(40px, 5vw, 90px);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.projects-page .projects-footer .footer-logo {
+    position: relative;
+
+    justify-self: start;
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+}
+
+
+.projects-page .projects-footer .footer-floating-logo {
+    display: block;
+
+    width: clamp(230px, 18vw, 330px);
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+.projects-page .projects-footer .footer-nav {
+    justify-self: center;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(28px, 2.5vw, 50px);
+
+    white-space: nowrap;
+}
+
+
+.projects-page .projects-footer .footer-nav a {
+    position: relative;
+
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(
+        .9rem,
+        1vw,
+        1.08rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        color .18s ease,
+        transform .18s ease;
+}
+
+
+.projects-page .projects-footer .footer-nav a:hover {
+    color: var(--projects-red);
+
+    transform: translate3d(
+        0,
+        -2px,
+        0
+    );
+}
+
+
+/* =========================================================
+   BLOQUE DERECHO
+   ICONOS + COPYRIGHT
+   ========================================================= */
+
+.projects-footer-right {
+    justify-self: end;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ICONOS SOCIALES
+   ========================================================= */
+
+.projects-page .projects-social-icons {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 14px;
+}
+
+
+.projects-page .projects-social-icons a {
+    position: relative;
+
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    padding: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, .95);
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .015
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transform: translateZ(0);
+
+    transition:
+        transform .18s ease,
+        background-color .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease;
+}
+
+
+.projects-page .projects-social-icons a::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        var(--projects-red);
+
+    opacity: 0;
+
+    transform: scale(.6);
+
+    transition:
+        opacity .18s ease,
+        transform .18s ease;
+}
+
+
+.projects-page .projects-social-icons a:hover {
+    border-color:
+        var(--projects-red);
+
+    transform:
+        translate3d(
+            0,
+            -4px,
+            0
+        )
+        scale(1.05);
+
+    box-shadow:
+        0 8px 22px
+        rgba(
+            242,
+            12,
+            37,
+            .24
+        );
+}
+
+
+.projects-page .projects-social-icons a:hover::before {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   TEXTO DE LOS ICONOS
+   ========================================================= */
+
+.projects-page .projects-social-icons span {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+
+    line-height: 1;
+
+    user-select: none;
+}
+
+
+/* INSTAGRAM */
+
+.projects-page .footer-social-instagram {
+    font-size: 1rem;
+
+    font-weight: 900;
+
+    letter-spacing: -.045em;
+}
+
+
+/* BEHANCE */
+
+.projects-page .footer-social-behance {
+    font-size: 1.08rem;
+
+    font-weight: 800;
+
+    letter-spacing: -.055em;
+}
+
+
+/* LINKEDIN */
+
+.projects-page .footer-social-linkedin {
+    font-size: 1.05rem;
+
+    font-weight: 900;
+
+    letter-spacing: -.055em;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.projects-page .projects-footer-copy {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0;
+
+    padding: 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .92
+        );
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        clamp(
+            .72rem,
+            .78vw,
+            .88rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    text-align: right;
+
+    white-space: normal;
+}
+
+
+/* =========================================================
+   HOVER DEL LOGO
+   ========================================================= */
+
+.projects-page .projects-footer .footer-logo img {
+    transition:
+        transform .22s ease,
+        filter .22s ease;
+}
+
+
+.projects-page .projects-footer .footer-logo:hover img {
+    transform:
+        translate3d(
+            0,
+            -3px,
+            0
+        )
+        scale(1.015);
+}
+
+
+/* =========================================================
+   MODO CREATIVO
+   ========================================================= */
+
+body.creative-on
+.projects-footer-right
+.projects-social-icons a {
+    animation:
+        projectsFooterSocialCreative
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+
+body.creative-on
+.projects-footer-right
+.projects-social-icons a:nth-child(2) {
+    animation-delay: .12s;
+}
+
+
+body.creative-on
+.projects-footer-right
+.projects-social-icons a:nth-child(3) {
+    animation-delay: .24s;
+}
+
+
+@keyframes projectsFooterSocialCreative {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            );
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                0,
+                -3px,
+                0
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+    max-width: 1200px
+) and (
+    min-width: 801px
+) {
+
+    .projects-page
+    .projects-footer
+    .footer-inner {
+
+        width: 94%;
+
+        grid-template-columns:
+            minmax(200px, .8fr)
+            auto
+            minmax(310px, 1fr);
+
+        gap: 30px;
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-floating-logo {
+
+        width:
+            clamp(
+                190px,
+                19vw,
+                260px
+            );
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-nav {
+
+        gap:
+            clamp(
+                18px,
+                2vw,
+                30px
+            );
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-nav a {
+
+        font-size:
+            .82rem;
+
+    }
+
+
+    .projects-page
+    .projects-social-icons a {
+
+        width: 52px;
+        height: 52px;
+
+        flex-basis: 52px;
+
+    }
+
+
+    .projects-page
+    .projects-footer-copy {
+
+        max-width: 380px;
+
+        font-size: .7rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .projects-page
+    .projects-footer
+    .footer-inner {
+
+        width:
+            min(
+                90%,
+                560px
+            );
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 27px;
+
+        text-align: center;
+
+    }
+
+
+    /* LOGO */
+
+    .projects-page
+    .projects-footer
+    .footer-logo {
+
+        justify-self: auto;
+
+        justify-content: center;
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-floating-logo {
+
+        width:
+            min(
+                72vw,
+                270px
+            );
+
+    }
+
+
+    /* NAVEGACIÓN */
+
+    .projects-page
+    .projects-footer
+    .footer-nav {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: center;
+
+        gap:
+            15px
+            25px;
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-nav a {
+
+        font-size: .82rem;
+
+    }
+
+
+    /* LADO DERECHO */
+
+    .projects-footer-right {
+
+        width: 100%;
+
+        align-items: center;
+
+        gap: 18px;
+
+    }
+
+
+    /* ICONOS */
+
+    .projects-page
+    .projects-social-icons {
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 14px;
+
+    }
+
+
+    .projects-page
+    .projects-social-icons a {
+
+        width: 54px;
+        height: 54px;
+
+        flex-basis: 54px;
+
+    }
+
+
+    /* COPYRIGHT */
+
+    .projects-page
+    .projects-footer-copy {
+
+        width: 100%;
+
+        max-width: 420px;
+
+        margin: 0 auto;
+
+        font-size: .68rem;
+
+        line-height: 1.5;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .projects-page
+    .projects-footer
+    .footer-inner {
+
+        width: 92%;
+
+        gap: 23px;
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-floating-logo {
+
+        width:
+            min(
+                74vw,
+                240px
+            );
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-nav {
+
+        gap:
+            13px
+            19px;
+
+    }
+
+
+    .projects-page
+    .projects-footer
+    .footer-nav a {
+
+        font-size: .76rem;
+
+    }
+
+
+    .projects-page
+    .projects-social-icons {
+
+        gap: 12px;
+
+    }
+
+
+    .projects-page
+    .projects-social-icons a {
+
+        width: 52px;
+        height: 52px;
+
+        flex-basis: 52px;
+
+    }
+
+
+    .projects-page
+    .footer-social-instagram {
+
+        font-size: .9rem;
+
+    }
+
+
+    .projects-page
+    .footer-social-behance,
+    .projects-page
+    .footer-social-linkedin {
+
+        font-size: .98rem;
+
+    }
+
+
+    .projects-page
+    .projects-footer-copy {
+
+        max-width: 330px;
+
+        font-size: .62rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCIR MOVIMIENTO
+   ========================================================= */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    body.creative-on
+    .projects-footer-right
+    .projects-social-icons a {
+
+        animation: none !important;
+
+    }
+
+
+    .projects-page
+    .projects-social-icons a,
+
+    .projects-page
+    .projects-footer
+    .footer-logo img {
+
+        transition: none;
+
+    }
+
+}

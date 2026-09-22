@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Proyectos de diseño gráfico, branding, diseño web, fotografía, 3D e ilustración de Sebastián Ramírez."
+    >
+
+    <title>Proyectos | Sebacho</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="./img/web.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/proyectos.css"
+    >
+</head>
+
+
+<body class="projects-page">
+
+    <!-- =====================================================
+         CURSOR / PARTÍCULAS
+    ====================================================== -->
+
+    <div
+        class="custom-cursor"
+        id="customCursor"
+        aria-hidden="true"
+    ></div>
+
+    <canvas
+        id="globalParticles"
+        class="global-particles"
+    ></canvas>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+        class="site-header header-visible"
+        id="siteHeader"
+    >
+
+        <div class="header-background"></div>
+
+        <div class="header-inner">
+
+            <a
+                href="index.html"
+                class="brand hover-menu-effect magnetic-button"
+                id="headerBrand"
+                aria-label="Inicio"
+            >
+
+                <img
+                    src="img/inicio/logo-sebacho.png"
+                    alt="Sebacho Portafolio"
+                    class="floating-logo"
+                    draggable="false"
+                >
+
+            </a>
+
+
+            <nav
+                class="main-nav"
+                id="mainNav"
+            >
+
+                <a
+                    href="index.html"
+                    class="nav-link magnetic-button"
+                >
+                    INICIO
+                </a>
+
+                <a
+                    href="proyectos.html"
+                    class="nav-link active magnetic-button"
+                >
+                    PROYECTOS
+                </a>
+
+                <a
+                    href="sobre-mi.html"
+                    class="nav-link magnetic-button"
+                >
+                    SOBRE MÍ
+                </a>
+
+                <a
+                    href="contacto.html"
+                    class="nav-link magnetic-button"
+                >
+                    CONTACTO
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="creative-mode hover-menu-effect magnetic-button"
+                    id="creativeMode"
+                    type="button"
+                    aria-label="Activar modo creativo"
+                    aria-pressed="false"
+                >
+
+                    <img
+                        src="img/inicio/modo-creativo-marco.png"
+                        alt=""
+                        class="creative-mode-frame"
+                        draggable="false"
+                    >
+
+                    <span class="creative-mode-label">
+                        MODO CREATIVO
+                    </span>
+
+                    <span class="creative-switch">
+                        <span class="creative-switch-dot"></span>
+                    </span>
+
+                </button>
+
+
+                <img
+                    src="img/inicio/corona.png"
+                    alt=""
+                    class="header-crown creative-extra-resource"
+                    draggable="false"
+                >
+
+            </div>
+
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENIDO
+    ====================================================== -->
+
+    <main class="projects-main">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section
+            class="projects-hero projects-reveal"
+            id="proyectos"
+        >
+
+            <img
+                src="img/proyectos/banner.png"
+                alt="Proyectos de Sebacho"
+                class="projects-hero-image"
+                draggable="false"
+                decoding="async"
+                fetchpriority="high"
+            >
+
+
+            <div class="projects-hero-title-wrap">
+
+                <img
+                    src="img/proyectos/titulo-proyectos.png"
+                    alt="Proyectos"
+                    class="projects-hero-title"
+                    draggable="false"
+                    decoding="async"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             GALERÍA
+        ================================================== -->
+
+        <section class="projects-gallery-section">
+
+            <div class="projects-gallery-inner">
+
+
+                <!-- =========================================
+                     ZONA DE FILTRACIÓN
+                ========================================== -->
+
+                <section
+                    class="filter-zone projects-reveal"
+                    aria-label="Filtros de proyectos"
+                >
+
+                    <span
+                        class="filter-decoration filter-decoration-left"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span
+                        class="filter-decoration filter-decoration-right"
+                        aria-hidden="true"
+                    ></span>
+
+
+                    <div class="filter-zone-header">
+
+                        <div class="filter-zone-icon">
+                            <span>♛</span>
+                        </div>
+
+
+                        <div class="filter-zone-copy">
+
+                            <span class="filter-zone-eyebrow">
+                                EXPLORA MI TRABAJO
+                            </span>
+
+                            <strong>
+                                ¿QUÉ QUIERES VER?
+                            </strong>
+
+                        </div>
+
+
+                        <div class="filter-zone-line"></div>
+
+
+                        <span class="filter-zone-number">
+                            12 PROYECTOS
+                        </span>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         SELECTOR RESPONSIVE
+                    ====================================== -->
+
+                    <button
+                        class="mobile-filter-toggle"
+                        id="mobileFilterToggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="projectFilters"
+                    >
+
+                        <span class="mobile-filter-selected">
+
+                            <span
+                                class="mobile-filter-number"
+                                id="mobileFilterNumber"
+                            >
+                                00
+                            </span>
+
+                            <span
+                                class="mobile-filter-current"
+                                id="mobileFilterCurrent"
+                            >
+                                TODOS
+                            </span>
+
+                        </span>
+
+
+                        <span class="mobile-filter-action">
+
+                            <span class="mobile-filter-label">
+                                FILTRAR
+                            </span>
+
+                            <span
+                                class="mobile-filter-arrow"
+                                aria-hidden="true"
+                            >
+                                ↓
+                            </span>
+
+                        </span>
+
+                    </button>
+
+
+                    <!-- =====================================
+                         FILTROS
+                    ====================================== -->
+
+                    <div
+                        class="project-filters"
+                        id="projectFilters"
+                        role="group"
+                        aria-label="Filtrar proyectos por categoría"
+                    >
+
+                        <button class="project-filter active" type="button" data-filter="all">
+                            <span class="filter-index">00</span>
+                            <span class="filter-name">TODOS</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="branding">
+                            <span class="filter-index">01</span>
+                            <span class="filter-name">BRANDING</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="packaging">
+                            <span class="filter-index">02</span>
+                            <span class="filter-name">PACKAGING</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="web">
+                            <span class="filter-index">03</span>
+                            <span class="filter-name">DISEÑO WEB</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="editorial">
+                            <span class="filter-index">04</span>
+                            <span class="filter-name">EDITORIAL</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="audiovisual">
+                            <span class="filter-index">05</span>
+                            <span class="filter-name">AUDIOVISUAL</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="3d">
+                            <span class="filter-index">06</span>
+                            <span class="filter-name">3D</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="ilustracion">
+                            <span class="filter-index">07</span>
+                            <span class="filter-name">ILUSTRACIÓN</span>
+                        </button>
+
+                        <button class="project-filter" type="button" data-filter="fotografia">
+                            <span class="filter-index">08</span>
+                            <span class="filter-name">FOTOGRAFÍA</span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     GRID
+                ========================================== -->
+
+                <div
+                    class="projects-grid"
+                    id="projectsGrid"
+                >
+
+
+                    <!-- 01 ULTRA 100 -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="branding packaging"
+                    >
+
+                        <a
+                            href="proyecto.html?id=ultra-100"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/ultra-100-portada.png"
+                                    alt="Ultra 100"
+                                    class="project-image"
+                                    draggable="false"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    01
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        ULTRA 100
+                                    </h2>
+
+                                    <p>
+                                        Branding · Packaging · Publicidad
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 02 MÜSS -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="branding packaging"
+                    >
+
+                        <a
+                            href="proyecto.html?id=muss"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Muss-portada.png"
+                                    alt="MÜSS"
+                                    class="project-image"
+                                    draggable="false"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    02
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        MÜSS
+                                    </h2>
+
+                                    <p>
+                                        Branding · Identidad visual · Packaging
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 03 RAYMAN -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="web"
+                    >
+
+                        <a
+                            href="proyecto.html?id=rayman"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Rayman-portada.png"
+                                    alt="Rayman Web"
+                                    class="project-image"
+                                    draggable="false"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    03
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Rayman Web
+                                    </h2>
+
+                                    <p>
+                                        Diseño web · UX/UI · Front-end
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 04 THE KING OF FIGHTERS -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="web"
+                    >
+
+                        <a
+                            href="proyecto.html?id=tkof"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/TKOF-portada.png"
+                                    alt="The King of Fighters"
+                                    class="project-image"
+                                    draggable="false"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    04
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        The King of Fighters
+                                    </h2>
+
+                                    <p>
+                                        Diseño web · UX/UI · Front-end
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 05 PETER LIK -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="branding"
+                    >
+
+                        <a
+                            href="proyecto.html?id=peter-lik"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Peter-portada.png"
+                                    alt="Peter Lik"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    05
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Peter Lik
+                                    </h2>
+
+                                    <p>
+                                        Branding · Identidad visual
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 06 CATÁLOGO -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="editorial"
+                    >
+
+                        <a
+                            href="proyecto.html?id=catalogo"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Catalogo-portada.png"
+                                    alt="Catálogo"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    06
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Catálogo
+                                    </h2>
+
+                                    <p>
+                                        Diseño editorial · Diagramación
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 07 CINEMATOGRAFÍA -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="audiovisual"
+                    >
+
+                        <a
+                            href="proyecto.html?id=cinematografia"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Cinematografia-portada.png"
+                                    alt="Cinematografía"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    07
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Diseño de personajes
+                                    </h2>
+
+                                    <p>
+                                        Audiovisual · Dirección visual
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 08 MODELADOS -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="3d"
+                    >
+
+                        <a
+                            href="proyecto.html?id=modelados"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Modelados-portada.png"
+                                    alt="Modelados 3D"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    08
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Modelados 3D
+                                    </h2>
+
+                                    <p>
+                                        Modelado · Iluminación · Render
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 09 FOTOGRAFÍA -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="fotografia"
+                    >
+
+                        <a
+                            href="proyecto.html?id=fotografia"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Fotografia-portada.png"
+                                    alt="Fotografía cinematográfica"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    09
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Fotografía cinematográfica
+                                    </h2>
+
+                                    <p>
+                                        Fotografía · Dirección visual · Edición
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 10 AFICHES -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="ilustracion editorial"
+                    >
+
+                        <a
+                            href="proyecto.html?id=afiches"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Afiches-portada.png"
+                                    alt="Diseño de afiches"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    10
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Diseño de afiches
+                                    </h2>
+
+                                    <p>
+                                        Diseño gráfico · Composición
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 11 NEORUPTURA -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="audiovisual"
+                    >
+
+                        <a
+                            href="proyecto.html?id=neoruptura"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Neoruptura-portada.png"
+                                    alt="Neoruptura"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    11
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Neoruptura
+                                    </h2>
+
+                                    <p>
+                                        Audiovisual · Diseño visual
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- 12 PLANETA VINTAGE -->
+
+                    <article
+                        class="project-card projects-reveal"
+                        data-category="web"
+                    >
+
+                        <a
+                            href="proyecto.html?id=planeta-vintage"
+                            class="project-card-link"
+                        >
+
+                            <div class="project-image-wrapper">
+
+                                <img
+                                    src="img/proyectos/Planeta-vintage-portada.png"
+                                    alt="Planeta Vintage"
+                                    class="project-image"
+                                    draggable="false"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <span class="project-number">
+                                    12
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card-info">
+
+                                <div class="project-card-copy">
+
+                                    <h2>
+                                        Planeta Vintage
+                                    </h2>
+
+                                    <p>
+                                        Diseño web · Cultura pop · UX/UI
+                                    </p>
+
+                                </div>
+
+                                <span class="project-arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BANNER FINAL
+        ================================================== -->
+
+        <section class="projects-final projects-reveal">
+
+            <img
+                src="img/proyectos/banner-final.png"
+                alt="Conoce mi portafolio"
+                class="projects-final-image"
+                draggable="false"
+                loading="lazy"
+                decoding="async"
+            >
+
+
+            <div class="projects-final-content">
+
+                <a
+                    href="https://www.behance.net/gallery/255990015/PORTAFOLIO_2026_SebachOo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="projects-show-all"
+                >
+
+                    <span class="show-all-copy">
+
+                        <small>
+                            DESCUBRE TODO MI TRABAJO
+                        </small>
+
+                        <strong>
+                            CONOCE MI PORTAFOLIO
+                        </strong>
+
+                    </span>
+
+
+                    <span class="show-all-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+ <!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer projects-footer">
+
+    <canvas
+        id="footerFire"
+        class="footer-fire"
+    ></canvas>
+
+    <div class="footer-red-glow"></div>
+
+
+    <div class="footer-inner">
+
+        <!-- LOGO -->
+        <a
+            href="index.html"
+            class="footer-logo magnetic-button"
+            aria-label="Ir al inicio"
+        >
+
+            <img
+                src="img/inicio/logo-sebacho.png"
+                alt="Sebacho"
+                class="floating-logo footer-floating-logo"
+                draggable="false"
+                loading="lazy"
+            >
+
+        </a>
+
+
+        <!-- NAVEGACIÓN -->
+        <nav
+            class="footer-nav"
+            aria-label="Navegación del footer"
+        >
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="proyectos.html">
+                Proyectos
+            </a>
+
+            <a href="sobre-mi.html">
+                Sobre mí
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <!-- LADO DERECHO -->
+        <div class="projects-footer-right">
+
+            <!-- REDES SOCIALES -->
+            <div
+                class="footer-socials projects-social-icons"
+                aria-label="Redes sociales"
+            >
+
+                <!-- INSTAGRAM -->
+                <a
+                    href="https://www.instagram.com/sebbacho/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    title="Instagram"
+                >
+
+                    <span class="footer-social-instagram">
+                        IG
+                    </span>
+
+                </a>
+
+
+                <!-- BEHANCE -->
+                <a
+                    href="https://www.behance.net/skullrex00reli"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                    title="Behance"
+                >
+
+                    <span class="footer-social-behance">
+                        Bē
+                    </span>
+
+                </a>
+
+
+                <!-- LINKEDIN -->
+                <a
+                    href="https://www.linkedin.com/in/ssebachoo-designer-447608274/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                >
+
+                    <span class="footer-social-linkedin">
+                        in
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+            <p class="footer-copy projects-footer-copy">
+                © <span id="currentYear">2026</span> Sebastián Ramírez.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- =====================================================
+         VOLVER ARRIBA
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Volver arriba"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/proyectos.js"></script>
+
+</body>
+
+</html>
